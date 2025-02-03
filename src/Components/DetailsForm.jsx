@@ -8,20 +8,9 @@ function DetailsForm() {
     email: "mail@mail.no",
     phone: "12345678",
   });
-  const handleFirstNameChange = (e) => {
-    setPerson({ ...person, firstName: e.target.value });
-    console.log(person);
-  };
-  const handleLastNameChange = (e) => {
-    setPerson({ ...person, lastName: e.target.value });
-    console.log(person);
-  };
-  const handleEmailChange = (e) => {
-    setPerson({ ...person, email: e.target.value });
-    console.log(person);
-  };
-  const handlePhoneChange = (e) => {
-    setPerson({ ...person, phone: e.target.value });
+  const handleDetailChange = (e) => {
+    console.log(e);
+    setPerson({ ...person, [e.target.name]: e.target.value });
     console.log(person);
   };
   return (
@@ -29,27 +18,27 @@ function DetailsForm() {
       <h1>{`${person.firstName} ${person.lastName}`}</h1>
       <Input
         label="First Name"
-        name="first-name"
+        name="firstName"
         value={person.firstName}
-        callback={handleFirstNameChange}
+        callback={handleDetailChange}
       />
       <Input
         label="Last Name"
-        name="last-name"
+        name="lastName"
         value={person.lastName}
-        callback={handleLastNameChange}
+        callback={handleDetailChange}
       />
       <Input
         label="Email"
         name="email"
         value={person.email}
-        callback={handleEmailChange}
+        callback={handleDetailChange}
       />
       <Input
         label="Phone"
         name="phone"
         value={person.phone}
-        callback={handlePhoneChange}
+        callback={handleDetailChange}
       />
     </form>
   );
