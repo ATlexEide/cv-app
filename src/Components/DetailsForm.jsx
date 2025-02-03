@@ -9,7 +9,6 @@ function DetailsForm() {
     phone: "12345678",
   });
   const handleDetailChange = (e) => {
-    console.log(e);
     setPerson({ ...person, [e.target.name]: e.target.value });
     console.log(person);
   };
