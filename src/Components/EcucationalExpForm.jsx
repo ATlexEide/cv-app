@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Input from "./Input";
 function EducationalExpForm() {
   const testData = [
     {
@@ -18,14 +19,14 @@ function EducationalExpForm() {
     },
   ];
   const [education, setEducation] = useState(testData);
+  const handleDetailChange = (e) => {
+    setEducation({ ...education, [e.index]: e.target.value });
+    console.log(education);
+  };
   return (
     <>
       <h2>Edu</h2>
-      <ul>
-        {education.map((item, index) => (
-          <li key={index}>{item.school}</li>
-        ))}
-      </ul>
+      <Input label="School" name="school" callback={handleDetailChange} />
     </>
   );
 }
