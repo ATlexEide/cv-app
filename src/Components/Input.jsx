@@ -1,6 +1,6 @@
 function Input({ label, name, value, callback }) {
   return (
-    <>
+    <div>
       <label htmlFor={name}>{label}</label>
       <input
         id={name}
@@ -9,7 +9,7 @@ function Input({ label, name, value, callback }) {
         value={value}
         onChange={callback}
       />
-    </>
+    </div>
   );
 }
 export default Input;
