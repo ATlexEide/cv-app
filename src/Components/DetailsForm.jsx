@@ -16,6 +16,10 @@ function DetailsForm() {
     setPerson({ ...person, lastName: e.target.value });
     console.log(person);
   };
+  const handleEmailChange = (e) => {
+    setPerson({ ...person, email: e.target.value });
+    console.log(person);
+  };
   return (
     <form>
       <h1>{`${person.firstName} ${person.lastName}`}</h1>
