@@ -3,16 +3,19 @@ import EducationInput from "./EducationInput";
 function EducationalExpForm() {
   const testData = {
     arna: {
+      schoolName: "arna",
       from: "some time",
       to: "some other time",
       attendance: "probably alright",
     },
     holen: {
+      schoolName: "holen",
       from: "some time",
       to: "some other time",
       attendance: "probably alright",
     },
     damsgård: {
+      schoolName: "damsgård",
       from: "some time",
       to: "some other time",
       attendance: "probably alright",
