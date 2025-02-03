@@ -1,9 +1,14 @@
 import "./App.css";
-
+import { useState } from "react";
+import Input from "./Components/Input";
 function App() {
+  const [person, setPerson] = useState("");
+  const handleOnChange = (e) => {
+    console.log(e.target.value);
+  };
   return (
     <>
-      <h1>Test</h1>
+      <Input label="Test" name="test" callback={handleOnChange} />
     </>
   );
 }
