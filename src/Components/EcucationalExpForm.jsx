@@ -1,32 +1,38 @@
 import { useState } from "react";
-import Input from "./Input";
+import EducationInput from "./EducationInput";
 function EducationalExpForm() {
-  const testData = [
-    {
-      school: "arna",
+  const testData = {
+    arna: {
       from: "some time",
       to: "some other time",
+      attendance: "probably alright",
     },
-    {
-      school: "damsgård",
+    holen: {
       from: "some time",
       to: "some other time",
+      attendance: "probably alright",
     },
-    {
-      school: "holen",
+    damsgård: {
       from: "some time",
       to: "some other time",
+      attendance: "probably alright",
     },
-  ];
+  };
   const [education, setEducation] = useState(testData);
-  const handleDetailChange = (e) => {
-    setEducation({ ...education, [e.index]: e.target.value });
+  console.log(education);
+  const handleDetailChange = (schoolInfo) => {
+    setEducation({ ...education, [schoolInfo.schoolName]: schoolInfo });
     console.log(education);
   };
   return (
     <>
       <h2>Edu</h2>
-      <Input label="School" name="school" callback={handleDetailChange} />
+      <EducationInput
+        index={0}
+        label="School"
+        name="school"
+        callback={handleDetailChange}
+      />
     </>
   );
 }
