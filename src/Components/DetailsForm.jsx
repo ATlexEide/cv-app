@@ -31,6 +31,12 @@ function DetailsForm() {
         value={person.lastName}
         callback={handleLastNameChange}
       />
+      <Input
+        label="Email"
+        name="email"
+        value={person.email}
+        callback={handleEmailChange}
+      />
     </form>
   );
 }
