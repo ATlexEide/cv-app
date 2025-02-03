@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./Input";
+import "../styles/DetailsForm.css";
 function DetailsForm() {
   const [person, setPerson] = useState({
     firstName: "Navn",
@@ -16,7 +17,7 @@ function DetailsForm() {
     console.log(person);
   };
   return (
-    <>
+    <form>
       <h1>{`${person.firstName} ${person.lastName}`}</h1>
       <Input
         label="First Name"
@@ -30,7 +31,7 @@ function DetailsForm() {
         value={person.lastName}
         callback={handleLastNameChange}
       />
-    </>
+    </form>
   );
 }
 export default DetailsForm;
