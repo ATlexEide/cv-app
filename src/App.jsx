@@ -5,6 +5,8 @@ function App() {
   const [person, setPerson] = useState({
     firstName: "Navn",
     lastName: "Navnesen",
+    email: "",
+    phone: "",
   });
   const handleFirstNameChange = (e) => {
     setPerson({ ...person, firstName: e.target.value });
