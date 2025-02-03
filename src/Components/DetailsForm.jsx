@@ -41,6 +41,12 @@ function DetailsForm() {
         value={person.email}
         callback={handleEmailChange}
       />
+      <Input
+        label="Phone"
+        name="phone"
+        value={person.phone}
+        callback={handlePhoneChange}
+      />
     </form>
   );
 }
