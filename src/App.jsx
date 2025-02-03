@@ -4,7 +4,7 @@ import DetailsForm from "./Components/DetailsForm";
 function App() {
   return (
     <>
-      <DetailsForm />;
+      <DetailsForm />
     </>
   );
 }
