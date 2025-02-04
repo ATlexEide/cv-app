@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../styles/EducationInput.css";
 function EducationInput({ label, name, callback }) {
   const [schoolInfo, setSchoolInfo] = useState({
     schoolName: "",
@@ -7,13 +7,41 @@ function EducationInput({ label, name, callback }) {
     from: "",
   });
   return (
-    <>
-      <label htmlFor={name}>{label}: </label>
+    <section id="educationalExperience">
+      <div>
+        <label htmlFor={name}>{label}: </label>
+        <input
+          id={name}
+          type="text"
+          onChange={(e) => {
+            setSchoolInfo({ ...schoolInfo, schoolName: e.target.value });
+          }}
+        />
+      </div>
+      <div>
+        <label htmlFor="study">Title of study</label>
+        <input
+          id="study"
+          type="text"
+          onChange={(e) => {
+            setSchoolInfo({ ...schoolInfo, study: e.target.value });
+          }}
+        />
+      </div>
+      <label htmlFor="dateFrom">Study from</label>
       <input
-        id={name}
-        type="text"
+        id="dateFrom"
+        type="date"
         onChange={(e) => {
-          setSchoolInfo({ ...schoolInfo, schoolName: e.target.value });
+          setSchoolInfo({ ...schoolInfo, dateFrom: e.target.value });
+        }}
+      />
+      <label htmlFor="dateTo">Study to</label>
+      <input
+        id="dateTo"
+        type="date"
+        onChange={(e) => {
+          setSchoolInfo({ ...schoolInfo, dateTo: e.target.value });
         }}
       />
       <button
@@ -23,7 +51,7 @@ function EducationInput({ label, name, callback }) {
       >
         Add
       </button>
-    </>
+    </section>
   );
 }
 export default EducationInput;
