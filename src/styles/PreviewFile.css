@@ -1,7 +1,11 @@
+#preview {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
 #file {
   background-color: white;
   color: black;
-  scale: 0.7;
   width: 210mm;
   height: 297mm;
 }
