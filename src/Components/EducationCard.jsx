@@ -2,11 +2,13 @@ import "../styles/PreviewFile.css";
 function EducationCard({ school, degree, timeFrom, timeTo }) {
   return (
     <article>
-      <h3 id="school">{school}</h3>
+      <div id="heading">
+        <span id="date">{`${timeFrom} -> ${timeTo}`}</span>
+        <h3 id="school">{school}</h3>
+      </div>
+
       <h4 id="degree">{degree}</h4>
-      <p>
-        {timeFrom} to {timeTo}
-      </p>
+      <p></p>
     </article>
   );
 }
