@@ -5,6 +5,8 @@ function PracticalInput() {
     <>
       <Input label="Company" name="company" />
       <Input label="Position" name="position" />
+      <Input type="date" label="From" name="timeFrom" />
+      <Input type="date" label="To" name="timeTo" />
       <Input type="textarea" label="Description" name="description" />
     </>
   );
