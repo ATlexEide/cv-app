@@ -12,8 +12,7 @@ function PreviewFile({ person }) {
       </section>
       <Border />
       <section id="education">
-        <h2>Education</h2>
-        <Border />
+        <h2 className="sectionTitle">Education</h2>
         <EducationCard
           school="Holen"
           degree="Comp science"
@@ -21,9 +20,17 @@ function PreviewFile({ person }) {
           timeTo="02/02/02"
           desc="asdaqdasdasd"
         />
+        <EducationCard
+          school="Damsgård"
+          degree="Science"
+          timeFrom="01/01/01"
+          timeTo="02/02/02"
+          desc="asdaqdasdasd"
+        />
       </section>
+      <Border />
       <section id="practical">
-        <Border />
+        <h2 className="sectionTitle">Practical</h2>
         <PracticalCard />
         <Border />
       </section>
