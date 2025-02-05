@@ -12,3 +12,9 @@
 .border {
   border-bottom: solid 2px black;
 }
+#contact-info {
+  display: flex;
+  justify-content: start;
+  gap: 2em;
+  padding: 0 2em;
+}
