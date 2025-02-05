@@ -19,6 +19,14 @@
   padding: 0 2em;
 }
 /* Cards */
+#heading {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: fit-content;
+}
 #school {
   padding: 0.1rem 0;
+}
+#date {
+  grid-column: 1/2;
 }
