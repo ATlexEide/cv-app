@@ -1,13 +1,13 @@
-function EducationCard() {
+import "../styles/PreviewFile.css";
+function EducationCard({ school, degree, timeFrom, timeTo }) {
   return (
-    <>
-      <h3>Education</h3>
-      <div>
-        <h4>Some school</h4>
-        <div>Some degree</div>
-        <div>From some time to some other time</div>
-      </div>
-    </>
+    <article>
+      <h3 id="school">{school}</h3>
+      <h4 id="degree">{degree}</h4>
+      <p>
+        {timeFrom} to {timeTo}
+      </p>
+    </article>
   );
 }
 export default EducationCard;
