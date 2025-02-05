@@ -1,17 +1,6 @@
-import { useState } from "react";
 import Input from "./Input";
 import "../styles/DetailsForm.css";
-function DetailsForm() {
-  const [person, setPerson] = useState({
-    firstName: "Navn",
-    lastName: "Navnesen",
-    email: "mail@mail.no",
-    phone: "12345678",
-  });
-  const handleDetailChange = (e) => {
-    setPerson({ ...person, [e.target.name]: e.target.value });
-    console.log(person);
-  };
+function DetailsForm({ person, callback }) {
   return (
     <form>
       <h1>{`${person.firstName} ${person.lastName}`}</h1>
@@ -19,25 +8,25 @@ function DetailsForm() {
         label="First Name"
         name="firstName"
         value={person.firstName}
-        callback={handleDetailChange}
+        callback={callback}
       />
       <Input
         label="Last Name"
         name="lastName"
         value={person.lastName}
-        callback={handleDetailChange}
+        callback={callback}
       />
       <Input
         label="Email"
         name="email"
         value={person.email}
-        callback={handleDetailChange}
+        callback={callback}
       />
       <Input
         label="Phone"
         name="phone"
         value={person.phone}
-        callback={handleDetailChange}
+        callback={callback}
       />
     </form>
   );
