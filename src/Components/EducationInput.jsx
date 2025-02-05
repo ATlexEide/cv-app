@@ -9,6 +9,7 @@ function EducationInput({ label, name, callback }) {
   return (
     <section id="educationalExperience">
       <div>
+        {/* TODO: REFACTOR INPUTS TO USE INPUT COMPONENT */}
         <label htmlFor={name}>{label}: </label>
         <input
           id={name}
