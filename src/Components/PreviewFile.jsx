@@ -1,13 +1,23 @@
 import "../styles/PreviewFile.css";
+import EducationCard from "./EducationCard";
+import PracticalCard from "./PracticalCard";
 function PreviewFile({ person }) {
   return (
     <article id="file">
       <h2>{`${person.firstName} ${person.lastName}`}</h2>
-      <div id="contact-info">
+      <section id="contact-info">
         <span id="email">{`Email: ${person.email}`}</span>
         <span id="phonenumber">{`Tlf: ${person.phone}`}</span>
-      </div>
-      <div className="border"></div>
+      </section>
+      <section id="education">
+        <div className="border"></div>
+        <EducationCard />
+      </section>
+      <section id="practical">
+        <div className="border"></div>
+        <PracticalCard />
+        <div className="border"></div>
+      </section>
     </article>
   );
 }
