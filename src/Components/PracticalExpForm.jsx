@@ -5,6 +5,7 @@ function PracticalExpForm() {
     <>
       <h2>Add practical experience</h2>
       <PracticalInput />
+      <button>Add experience</button>
     </>
   );
 }
