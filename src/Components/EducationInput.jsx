@@ -45,13 +45,6 @@ function EducationInput({ label, name, callback }) {
           setSchoolInfo({ ...schoolInfo, dateTo: e.target.value });
         }}
       />
-      <button
-        onClick={() => {
-          callback(schoolInfo);
-        }}
-      >
-        Add
-      </button>
     </section>
   );
 }
