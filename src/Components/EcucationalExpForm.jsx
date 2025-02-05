@@ -29,7 +29,7 @@ function EducationalExpForm() {
   };
   return (
     <>
-      <h2>Edu</h2>
+      <h2>Add education</h2>
       <EducationInput
         index={0}
         label="School"
