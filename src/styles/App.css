@@ -6,3 +6,18 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #file {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+@page {
+  size: auto;
+  margin: 0mm;
+}
