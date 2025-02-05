@@ -11,7 +11,12 @@ function PreviewFile({ person }) {
       </section>
       <section id="education">
         <div className="border"></div>
-        <EducationCard />
+        <EducationCard
+          school="Holen"
+          degree="Comp science"
+          timeFrom="yes"
+          timeTo="no"
+        />
       </section>
       <section id="practical">
         <div className="border"></div>
