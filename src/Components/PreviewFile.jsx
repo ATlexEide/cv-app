@@ -14,8 +14,8 @@ function PreviewFile({ person }) {
         <EducationCard
           school="Holen"
           degree="Comp science"
-          timeFrom="yes"
-          timeTo="no"
+          timeFrom="01/01/01"
+          timeTo="02/02/02"
         />
       </section>
       <section id="practical">
