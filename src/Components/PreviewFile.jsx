@@ -1,6 +1,7 @@
 import "../styles/PreviewFile.css";
 import EducationCard from "./EducationCard";
 import PracticalCard from "./PracticalCard";
+import Border from "./Border";
 function PreviewFile({ person }) {
   return (
     <article id="file">
@@ -9,19 +10,22 @@ function PreviewFile({ person }) {
         <span id="email">{`Email: ${person.email}`}</span>
         <span id="phonenumber">{`Tlf: ${person.phone}`}</span>
       </section>
+      <Border />
       <section id="education">
-        <div className="border"></div>
+        <h2>Education</h2>
+        <Border />
         <EducationCard
           school="Holen"
           degree="Comp science"
           timeFrom="01/01/01"
           timeTo="02/02/02"
+          desc="asdaqdasdasd"
         />
       </section>
       <section id="practical">
-        <div className="border"></div>
+        <Border />
         <PracticalCard />
-        <div className="border"></div>
+        <Border />
       </section>
     </article>
   );
