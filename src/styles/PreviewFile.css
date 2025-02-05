@@ -30,3 +30,7 @@
 #date {
   grid-column: 1/2;
 }
+.sectionTitle {
+  text-align: start;
+  padding: 0 3em;
+}
