@@ -36,6 +36,7 @@ function EducationalExpForm() {
         name="school"
         callback={handleDetailChange}
       />
+      <button>Add education</button>
     </>
   );
 }
