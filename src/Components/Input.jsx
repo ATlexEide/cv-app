@@ -1,14 +1,24 @@
-function Input({ label, name, value, callback }) {
+function Input({ label, name, type = "text", value, callback }) {
   return (
     <div>
       <label htmlFor={name}>{label}: </label>
-      <input
-        id={name}
-        name={name}
-        type="text"
-        value={value}
-        onChange={callback}
-      />
+      {type === "textarea" ? (
+        <textarea
+          id={name}
+          name={name}
+          type={type}
+          value={value}
+          onChange={callback}
+        />
+      ) : (
+        <input
+          id={name}
+          name={name}
+          type={type}
+          value={value}
+          onChange={callback}
+        />
+      )}
     </div>
   );
 }
