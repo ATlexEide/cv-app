@@ -3,6 +3,22 @@ import EducationCard from "./EducationCard";
 import PracticalCard from "./PracticalCard";
 import Border from "./Border";
 function PreviewFile({ person }) {
+  const info = [
+    {
+      school: "Holen",
+      degree: "Comp Science",
+      timeFrom: "01/01/01",
+      timeTo: "02/02/02",
+      desc: "asdaqdasdasd",
+    },
+    {
+      school: "Damsgård",
+      degree: "Science",
+      timeFrom: "01/01/01",
+      timeTo: "02/02/02",
+      desc: "asdaqdasdasd",
+    },
+  ];
   return (
     <article id="file">
       <h2>{`${person.firstName} ${person.lastName}`}</h2>
@@ -13,20 +29,10 @@ function PreviewFile({ person }) {
       <Border />
       <section id="education">
         <h2 className="sectionTitle">Education</h2>
-        <EducationCard
-          school="Holen"
-          degree="Comp science"
-          timeFrom="01/01/01"
-          timeTo="02/02/02"
-          desc="asdaqdasdasd"
-        />
-        <EducationCard
-          school="Damsgård"
-          degree="Science"
-          timeFrom="01/01/01"
-          timeTo="02/02/02"
-          desc="asdaqdasdasd"
-        />
+        {info.map((school, index) => {
+          // console.log(school);
+          return <EducationCard key={index} data={school} />;
+        })}
       </section>
       <Border />
       <section id="practical">
