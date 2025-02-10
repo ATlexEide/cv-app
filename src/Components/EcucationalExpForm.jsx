@@ -22,7 +22,6 @@ function EducationalExpForm() {
     },
   };
   const [education, setEducation] = useState(testData);
-  console.log(education);
   const handleDetailChange = (schoolInfo) => {
     setEducation({ ...education, [schoolInfo.schoolName]: schoolInfo });
     console.log(education);
