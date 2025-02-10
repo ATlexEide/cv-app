@@ -1,16 +1,17 @@
 import "../styles/PreviewFile.css";
-function EducationCard({ school, degree, timeFrom, timeTo, desc }) {
+function EducationCard({ data }) {
+  console.log(data);
   return (
     <article>
       <div id="heading">
-        <span id="date">{`${timeFrom} -> ${timeTo}`}</span>
-        <h3 id="school">{school}</h3>
+        <span id="date">{`${data.timeFrom} -> ${data.timeTo}`}</span>
+        <h3 id="school">{data.school}</h3>
       </div>
-      <h4 id="degree">{degree}</h4>
-      {desc && (
+      <h4 id="degree">{data.degree}</h4>
+      {data.desc && (
         <div>
           <h5>Extra info:</h5>
-          <p id="desc">{desc}</p>
+          <p id="desc">{data.desc}</p>
         </div>
       )}
     </article>
