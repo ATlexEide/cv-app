@@ -14,6 +14,8 @@ function EducationCard({ data }) {
           <p id="desc">{data.desc}</p>
         </div>
       )}
+      <button>Edit</button>
+      <button>Remove</button>
     </article>
   );
 }
