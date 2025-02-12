@@ -15,7 +15,7 @@ function EducationCard({ data, handleClick }) {
       )}
       <button
         onClick={() => {
-          handleClick();
+          handleClick(data);
         }}
       >
         Edit
