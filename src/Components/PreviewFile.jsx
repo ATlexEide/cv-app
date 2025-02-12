@@ -24,6 +24,9 @@ function PreviewFile({ person }) {
   const handleEditCard = (card) => {
     console.log(card);
   };
+  const handleDeleteCard = (card) => {
+    console.log(card);
+  };
   return (
     <article id="file">
       <h2>{`${person.firstName} ${person.lastName}`}</h2>
@@ -40,6 +43,7 @@ function PreviewFile({ person }) {
               key={index}
               data={school}
               handleEdit={handleEditCard}
+              handleDelete={handleDeleteCard}
             />
           );
         })}
