@@ -22,7 +22,7 @@ function EducationCard({ data, handleEdit, handleDelete }) {
       </button>
       <button
         onClick={() => {
-          handleDelete(data);
+          handleDelete(data.id);
         }}
       >
         Remove
