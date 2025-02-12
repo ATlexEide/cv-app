@@ -24,8 +24,10 @@ function PreviewFile({ person }) {
   const handleEditCard = (card) => {
     console.log(card);
   };
-  const handleDeleteCard = (card) => {
-    console.log(card);
+  const handleDeleteCard = (cardId) => {
+    const newData = data.filter((card) => card.id !== cardId);
+    console.log(newData);
+    setData(newData);
   };
   return (
     <article id="file">
