@@ -2,25 +2,27 @@ import "../styles/PreviewFile.css";
 import EducationCard from "./EducationCard";
 import PracticalCard from "./PracticalCard";
 import Border from "./Border";
+import { useState } from "react";
 function PreviewFile({ person }) {
-  const info = [
-    {
-      school: "Holen",
-      degree: "Comp Science",
-      timeFrom: "01/01/01",
-      timeTo: "02/02/02",
-      desc: "asdaqdasdasd",
-    },
-    {
-      school: "Damsgård",
-      degree: "Science",
-      timeFrom: "01/01/01",
-      timeTo: "02/02/02",
-      desc: "asdaqdasdasd",
-    },
-  ];
-  const handleEditCard = () => {
-    console.log("click");
+  let mockData = {
+    id: 0,
+    school: "Holen",
+    degree: "Comp Science",
+    timeFrom: "01/01/01",
+    timeTo: "02/02/02",
+    desc: "asdaqdasdasd",
+  };
+  let mockData2 = {
+    id: 1,
+    school: "Damsgård",
+    degree: "UwU",
+    timeFrom: "01/01/01",
+    timeTo: "02/02/02",
+    desc: "dadadad",
+  };
+  const [data, setData] = useState([mockData, mockData2]);
+  const handleEditCard = (card) => {
+    console.log(card);
   };
   return (
     <article id="file">
@@ -32,7 +34,7 @@ function PreviewFile({ person }) {
       <Border />
       <section id="education">
         <h2 className="sectionTitle">Education</h2>
-        {info.map((school, index) => {
+        {data.map((school, index) => {
           // console.log(school);
           return (
             <EducationCard
