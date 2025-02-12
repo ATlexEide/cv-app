@@ -1,7 +1,14 @@
-function EditDialog() {
+import { useEffect } from "react";
+
+function EditDialog({ card, dialogIsOpen }) {
+  useEffect(() => {
+    if (dialogIsOpen)
+      document.getElementById("editDialog").setAttribute("open", true);
+    else document.getElementById("editDialog").removeAttribute("open");
+  });
   return (
-    <dialog>
-      <h1>test</h1>
+    <dialog id="editDialog">
+      <h1>{card.school}</h1>
     </dialog>
   );
 }
