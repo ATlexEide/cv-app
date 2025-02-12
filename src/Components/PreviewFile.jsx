@@ -9,20 +9,20 @@ function PreviewFile({ person }) {
     id: 0,
     school: "Holen",
     degree: "Comp Science",
-    timeFrom: "01/01/01",
-    timeTo: "02/02/02",
+    timeFrom: "2001-01-01",
+    timeTo: "2002-02-02",
     desc: "asdaqdasdasd",
   };
   let mockData2 = {
     id: 1,
     school: "Damsgård",
     degree: "UwU",
-    timeFrom: "01/01/01",
-    timeTo: "02/02/02",
+    timeFrom: "2001-01-01",
+    timeTo: "2002-02-02",
     desc: "dadadad",
   };
   const [data, setData] = useState([mockData, mockData2]);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [currentCard, setCurrentCard] = useState({});
 
   const handleEditCard = (card) => {
