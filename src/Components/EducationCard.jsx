@@ -1,5 +1,5 @@
 import "../styles/PreviewFile.css";
-function EducationCard({ data, handleEdit }) {
+function EducationCard({ data, handleEdit, handleDelete }) {
   return (
     <article>
       <div id="heading">
@@ -20,7 +20,13 @@ function EducationCard({ data, handleEdit }) {
       >
         Edit
       </button>
-      <button>Remove</button>
+      <button
+        onClick={() => {
+          handleDelete(data);
+        }}
+      >
+        Remove
+      </button>
     </article>
   );
 }
