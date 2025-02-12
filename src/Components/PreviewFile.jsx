@@ -19,6 +19,9 @@ function PreviewFile({ person }) {
       desc: "asdaqdasdasd",
     },
   ];
+  const handleEditCard = () => {
+    console.log("click");
+  };
   return (
     <article id="file">
       <h2>{`${person.firstName} ${person.lastName}`}</h2>
@@ -31,7 +34,13 @@ function PreviewFile({ person }) {
         <h2 className="sectionTitle">Education</h2>
         {info.map((school, index) => {
           // console.log(school);
-          return <EducationCard key={index} data={school} />;
+          return (
+            <EducationCard
+              key={index}
+              data={school}
+              handleClick={handleEditCard}
+            />
+          );
         })}
       </section>
       <Border />
