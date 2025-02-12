@@ -25,9 +25,7 @@ function PreviewFile({ person }) {
     console.log(card);
   };
   const handleDeleteCard = (cardId) => {
-    const newData = data.filter((card) => card.id !== cardId);
-    console.log(newData);
-    setData(newData);
+    setData(data.filter((card) => card.id !== cardId));
   };
   return (
     <article id="file">
