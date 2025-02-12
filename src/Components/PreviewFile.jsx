@@ -3,6 +3,7 @@ import EducationCard from "./EducationCard";
 import PracticalCard from "./PracticalCard";
 import Border from "./Border";
 import { useState } from "react";
+import EditDialog from "./EditDialog";
 function PreviewFile({ person }) {
   let mockData = {
     id: 0,
@@ -21,40 +22,47 @@ function PreviewFile({ person }) {
     desc: "dadadad",
   };
   const [data, setData] = useState([mockData, mockData2]);
+  const [isOpen, setIsOpen] = useState(true);
+  const [currentCard, setCurrentCard] = useState({});
+
   const handleEditCard = (card) => {
-    console.log(card);
+    setCurrentCard(card);
+    setIsOpen(true);
   };
   const handleDeleteCard = (cardId) => {
     setData(data.filter((card) => card.id !== cardId));
   };
   return (
-    <article id="file">
-      <h2>{`${person.firstName} ${person.lastName}`}</h2>
-      <section id="contact-info">
-        <span id="email">{`Email: ${person.email}`}</span>
-        <span id="phonenumber">{`Tlf: ${person.phone}`}</span>
-      </section>
-      <Border />
-      <section id="education">
-        <h2 className="sectionTitle">Education</h2>
-        {data.map((school, index) => {
-          return (
-            <EducationCard
-              key={index}
-              data={school}
-              handleEdit={handleEditCard}
-              handleDelete={handleDeleteCard}
-            />
-          );
-        })}
-      </section>
-      <Border />
-      <section id="practical">
-        <h2 className="sectionTitle">Practical</h2>
-        <PracticalCard />
+    <>
+      <article id="file">
+        <h2>{`${person.firstName} ${person.lastName}`}</h2>
+        <section id="contact-info">
+          <span id="email">{`Email: ${person.email}`}</span>
+          <span id="phonenumber">{`Tlf: ${person.phone}`}</span>
+        </section>
         <Border />
-      </section>
-    </article>
+        <section id="education">
+          <h2 className="sectionTitle">Education</h2>
+          {data.map((school, index) => {
+            return (
+              <EducationCard
+                key={index}
+                data={school}
+                handleEdit={handleEditCard}
+                handleDelete={handleDeleteCard}
+              />
+            );
+          })}
+        </section>
+        <Border />
+        <section id="practical">
+          <h2 className="sectionTitle">Practical</h2>
+          <PracticalCard />
+          <Border />
+        </section>
+      </article>
+      <EditDialog card={currentCard} dialogIsOpen={isOpen} />
+    </>
   );
 }
 export default PreviewFile;
