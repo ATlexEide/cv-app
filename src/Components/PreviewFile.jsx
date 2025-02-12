@@ -39,7 +39,7 @@ function PreviewFile({ person }) {
             <EducationCard
               key={index}
               data={school}
-              handleClick={handleEditCard}
+              handleEdit={handleEditCard}
             />
           );
         })}

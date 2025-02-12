@@ -1,5 +1,5 @@
 import "../styles/PreviewFile.css";
-function EducationCard({ data, handleClick }) {
+function EducationCard({ data, handleEdit }) {
   return (
     <article>
       <div id="heading">
@@ -15,7 +15,7 @@ function EducationCard({ data, handleClick }) {
       )}
       <button
         onClick={() => {
-          handleClick(data);
+          handleEdit(data);
         }}
       >
         Edit
