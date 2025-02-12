@@ -35,7 +35,6 @@ function PreviewFile({ person }) {
       <section id="education">
         <h2 className="sectionTitle">Education</h2>
         {data.map((school, index) => {
-          // console.log(school);
           return (
             <EducationCard
               key={index}
