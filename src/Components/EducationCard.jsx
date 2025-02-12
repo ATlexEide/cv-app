@@ -1,6 +1,5 @@
 import "../styles/PreviewFile.css";
-function EducationCard({ data }) {
-  console.log(data);
+function EducationCard({ data, handleClick }) {
   return (
     <article>
       <div id="heading">
@@ -14,7 +13,13 @@ function EducationCard({ data }) {
           <p id="desc">{data.desc}</p>
         </div>
       )}
-      <button>Edit</button>
+      <button
+        onClick={() => {
+          handleClick();
+        }}
+      >
+        Edit
+      </button>
       <button>Remove</button>
     </article>
   );
