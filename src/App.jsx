@@ -32,6 +32,24 @@ function App() {
       desc: "asdaqdasdasd",
     },
   ];
+  const testData2 = [
+    {
+      id: 0,
+      company: "Some workplace",
+      title: "Comp Science",
+      timeFrom: "2001-01-01",
+      timeTo: "2002-02-02",
+      desc: "asdaqdasdasd",
+    },
+    {
+      id: 1,
+      company: "Some other workplace",
+      title: "Science Science",
+      timeFrom: "2001-01-01",
+      timeTo: "2002-02-02",
+      desc: "asdaqdasdasd",
+    },
+  ];
   // TODO END
   const [person, setPerson] = useState({
     firstName: "Navn",
@@ -40,14 +58,17 @@ function App() {
     phone: "12345678",
   });
   const [education, setEducation] = useState(testData);
+  const [practical, setPractical] = useState(testData2);
   const handleDetailChange = (e) => {
     setPerson({ ...person, [e.target.name]: e.target.value });
     console.log(person);
   };
   // TODO: Remove hardcoded value
-  const addExperience = (edu) => {
-    console.log(edu);
-    setEducation([...education, edu]);
+  const addExperience = (exp, type) => {
+    console.log("aaaaaaaaaaaaaaaa", exp);
+    console.log(practical);
+    if (type === "education") setEducation([...education, exp]);
+    if (type === "practical") setPractical([...practical, exp]);
   };
   return (
     <>
@@ -58,10 +79,16 @@ function App() {
           setEducation={setEducation}
           addExperience={addExperience}
         />
-        <PracticalExpForm addExperience={addExperience} />
+        <PracticalExpForm
+          practical={practical}
+          setPractical={setPractical}
+          addExperience={addExperience}
+        />
       </section>
       <section id="preview">
         <PreviewFile
+          practical={practical}
+          setPractical={setPractical}
           education={education}
           setEducation={setEducation}
           person={person}
