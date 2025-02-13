@@ -15,12 +15,14 @@ function App() {
     setPerson({ ...person, [e.target.name]: e.target.value });
     console.log(person);
   };
-
+  const addCard = () => {
+    alert("yipp");
+  };
   return (
     <>
       <section id="inputs">
         <DetailsForm person={person} callback={handleDetailChange} />
-        <EducationalExpForm />
+        <EducationalExpForm addCard={addCard} />
         <PracticalExpForm />
       </section>
       <section id="preview">
