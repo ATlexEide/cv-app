@@ -1,4 +1,4 @@
-function Input({ label, name, type = "text", value, callback }) {
+function Input({ label, name, type = "text", value, onChange }) {
   return (
     <div>
       <label htmlFor={name}>{label}: </label>
@@ -8,7 +8,7 @@ function Input({ label, name, type = "text", value, callback }) {
           name={name}
           type={type}
           value={value}
-          onChange={callback}
+          onChange={onChange}
         />
       ) : (
         <input
@@ -16,7 +16,7 @@ function Input({ label, name, type = "text", value, callback }) {
           name={name}
           type={type}
           value={value}
-          onChange={callback}
+          onChange={onChange}
         />
       )}
     </div>

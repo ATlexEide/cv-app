@@ -33,33 +33,33 @@ function EditDialog({ card, dialogIsOpen }) {
         name={school}
         type="text"
         value={school}
-        callback={(e) => setSchool(e.target.value)}
+        onChange={(e) => setSchool(e.target.value)}
       />
       <Input
         label="Degree"
         name={degree}
         value={degree}
         type="text"
-        callback={(e) => setDegree(e.target.value)}
+        onChange={(e) => setDegree(e.target.value)}
       />
       <Input
         label="Desc"
         name={desc}
         value={desc}
         type="textarea"
-        callback={(e) => setDesc(e.target.value)}
+        onChange={(e) => setDesc(e.target.value)}
       />
       <Input
         label="From"
         value={from}
         type="date"
-        callback={(e) => setFrom(e.target.value)}
+        onChange={(e) => setFrom(e.target.value)}
       />
       <Input
         label="To"
         name={to}
         value={to}
-        callback={(e) => setTo(e.target.value)}
+        onChange={(e) => setTo(e.target.value)}
         type="date"
       />
     </dialog>
