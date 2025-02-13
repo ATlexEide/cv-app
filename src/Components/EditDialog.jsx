@@ -81,6 +81,7 @@ function EditDialog({ card, dialogIsOpen }) {
         }}
         type="date"
       />
+      <button>Apply changes</button>
     </dialog>
   );
 }
