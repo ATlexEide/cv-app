@@ -40,6 +40,7 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
     setDialogIsOpen(false);
   };
   return (
+    // TODO: Make inputs not hard coded
     <dialog id="editDialog">
       <Input
         label="School"
