@@ -1,13 +1,46 @@
 import Input from "./Input";
 
-function PracticalInput() {
+function PracticalInput({ practicalInfo, setPracticalInfo }) {
   return (
     <>
-      <Input label="Company" name="company" />
-      <Input label="Position" name="position" />
-      <Input type="date" label="From" name="timeFrom" />
-      <Input type="date" label="To" name="timeTo" />
-      <Input type="textarea" label="Description" name="description" />
+      <Input
+        label="Company"
+        name="company"
+        onChange={(e) => {
+          setPracticalInfo({ ...practicalInfo, company: e.target.value });
+        }}
+      />
+      <Input
+        label="Title"
+        name="title"
+        onChange={(e) => {
+          setPracticalInfo({ ...practicalInfo, title: e.target.value });
+        }}
+      />
+      <Input
+        type="date"
+        label="From"
+        name="timeFrom"
+        onChange={(e) => {
+          setPracticalInfo({ ...practicalInfo, timeFrom: e.target.value });
+        }}
+      />
+      <Input
+        type="date"
+        label="To"
+        name="timeTo"
+        onChange={(e) => {
+          setPracticalInfo({ ...practicalInfo, timeTo: e.target.value });
+        }}
+      />
+      <Input
+        type="textarea"
+        label="Desc"
+        name="desc"
+        onChange={(e) => {
+          setPracticalInfo({ ...practicalInfo, desc: e.target.value });
+        }}
+      />
     </>
   );
 }
