@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Input from "./Input";
+import Input from "./Inputs/Input";
 
 function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
   const [school, setSchool] = useState("");

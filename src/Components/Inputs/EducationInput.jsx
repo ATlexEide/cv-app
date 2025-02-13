@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/EducationInput.css";
-function EducationInput({ label, name, callback }) {
+function EducationInput({ label, name }) {
   const [schoolInfo, setSchoolInfo] = useState({
     schoolName: "",
     to: "",

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import EducationInput from "./EducationInput";
-function EducationalExpForm() {
+import EducationInput from "../Inputs/EducationInput";
+
+function EducationalExpForm({ addCard }) {
   const testData = {
     arna: {
       schoolName: "arna",
@@ -26,6 +27,7 @@ function EducationalExpForm() {
     setEducation({ ...education, [schoolInfo.schoolName]: schoolInfo });
     console.log(education);
   };
+
   return (
     <>
       <h2>Add education</h2>
@@ -35,7 +37,7 @@ function EducationalExpForm() {
         name="school"
         callback={handleDetailChange}
       />
-      <button>Add education</button>
+      <button onClick={addCard}>Add education</button>
     </>
   );
 }

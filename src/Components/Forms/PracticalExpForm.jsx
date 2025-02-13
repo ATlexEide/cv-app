@@ -1,4 +1,4 @@
-import PracticalInput from "./PracticalInput";
+import PracticalInput from "../Inputs/PracticalInput";
 
 function PracticalExpForm() {
   return (
