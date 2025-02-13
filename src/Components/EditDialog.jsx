@@ -27,8 +27,6 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
     card.timeTo,
     dialogIsOpen,
   ]);
-  // console.log("new card ", newCard);
-  // console.log("card ", card);
 
   const handleUpdate = () => {
     console.log(data);
