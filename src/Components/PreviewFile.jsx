@@ -4,24 +4,7 @@ import PracticalCard from "./Cards/PracticalCard";
 import Border from "./Border";
 import { useState } from "react";
 import EditDialog from "./EditDialog";
-function PreviewFile({ person }) {
-  let mockData = {
-    id: 0,
-    school: "Holen",
-    degree: "Comp Science",
-    timeFrom: "2001-01-01",
-    timeTo: "2002-02-02",
-    desc: "asdaqdasdasd",
-  };
-  let mockData2 = {
-    id: 1,
-    school: "Damsgård",
-    degree: "UwU",
-    timeFrom: "2001-01-01",
-    timeTo: "2002-02-02",
-    desc: "dadadad",
-  };
-  const [data, setData] = useState([mockData, mockData2]);
+function PreviewFile({ education, setEducation, person }) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCard, setCurrentCard] = useState({});
 
@@ -30,7 +13,7 @@ function PreviewFile({ person }) {
     setIsOpen(true);
   };
   const handleDeleteCard = (cardId) => {
-    setData(data.filter((card) => card.id !== cardId));
+    setEducation(education.filter((card) => card.id !== cardId));
   };
   return (
     <>
@@ -43,7 +26,7 @@ function PreviewFile({ person }) {
         <Border />
         <section id="education">
           <h2 className="sectionTitle">Education</h2>
-          {data.map((school, index) => {
+          {education.map((school, index) => {
             return (
               <EducationCard
                 key={index}
@@ -64,8 +47,8 @@ function PreviewFile({ person }) {
       <EditDialog
         card={currentCard}
         dialogIsOpen={isOpen}
-        data={data}
-        setData={setData}
+        data={education}
+        setData={setEducation}
         setDialogIsOpen={setIsOpen}
       />
     </>
