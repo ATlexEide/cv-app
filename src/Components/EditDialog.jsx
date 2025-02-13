@@ -26,7 +26,6 @@ function EditDialog({ card, dialogIsOpen }) {
   const [from, setFrom] = useState(card.timeFrom);
   const [to, setTo] = useState(card.timeTo);
 
-  // TODO: Fix inputs
   return (
     <dialog id="editDialog">
       <Input
