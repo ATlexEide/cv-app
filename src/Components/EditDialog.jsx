@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "./Input";
 
-function EditDialog({ card, dialogIsOpen }) {
+function EditDialog({ card, dialogIsOpen, data, setData }) {
   const [school, setSchool] = useState("");
   const [degree, setDegree] = useState("");
   const [desc, setDesc] = useState("");
@@ -27,9 +27,16 @@ function EditDialog({ card, dialogIsOpen }) {
     card.timeTo,
     dialogIsOpen,
   ]);
-  console.log("new card ", newCard);
-  console.log("card ", card);
+  // console.log("new card ", newCard);
+  // console.log("card ", card);
 
+  const handleUpdate = () => {
+    console.log(data);
+    const newData = data.map((item, index) =>
+      index === newCard.id ? newCard : item
+    );
+    setData(newData);
+  };
   return (
     <dialog id="editDialog">
       <Input
@@ -81,7 +88,7 @@ function EditDialog({ card, dialogIsOpen }) {
         }}
         type="date"
       />
-      <button>Apply changes</button>
+      <button onClick={handleUpdate}>Apply changes</button>
     </dialog>
   );
 }
