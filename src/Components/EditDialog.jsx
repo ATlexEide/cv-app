@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import Input from "./Inputs/Input";
 
 function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
+  // TODO: FIX IMMINENT MESS
   const [school, setSchool] = useState("");
+  const [company, setCompany] = useState("");
+  const [title, setTitle] = useState("");
   const [degree, setDegree] = useState("");
   const [desc, setDesc] = useState("");
   const [from, setFrom] = useState("");
@@ -12,14 +15,22 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
     if (dialogIsOpen)
       document.getElementById("editDialog").setAttribute("open", true);
     else document.getElementById("editDialog").removeAttribute("open");
-    setSchool(card.school);
-    setDegree(card.degree);
+    if (card.school) {
+      setSchool(card.school);
+      setDegree(card.degree);
+    }
+    if (card.company) {
+      setCompany(card.company);
+      setTitle(card.title);
+    }
     setDesc(card.desc);
     setFrom(card.timeFrom);
     setTo(card.timeTo);
     setNewCard(card);
   }, [
     card,
+    card.company,
+    card.title,
     card.school,
     card.degree,
     card.desc,
@@ -43,23 +54,43 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
     // TODO: Make inputs not hard coded
     <dialog id="editDialog">
       <Input
-        label="School"
-        name={school}
+        label={card.school ? "School" : "Company"}
+        name={card.school ? school : company}
         type="text"
-        value={school}
+        value={card.school ? school : company}
         onChange={(e) => {
-          setSchool(e.target.value);
-          setNewCard({ ...newCard, school: e.target.value });
+          {
+            card.school && setSchool(e.target.value);
+          }
+          {
+            card.company && setCompany(e.target.value);
+          }
+          {
+            card.school && setNewCard({ ...newCard, school: e.target.value });
+          }
+          {
+            card.company && setNewCard({ ...newCard, company: e.target.value });
+          }
         }}
       />
       <Input
-        label="Degree"
-        name={degree}
-        value={degree}
+        label={card.school ? "Degree" : "Title"}
+        name={card.school ? degree : title}
+        value={card.school ? degree : title}
         type="text"
         onChange={(e) => {
-          setDegree(e.target.value);
-          setNewCard({ ...newCard, degree: e.target.value });
+          {
+            card.school && setDegree(e.target.value);
+          }
+          {
+            card.company && setTitle(e.target.value);
+          }
+          {
+            card.school && setNewCard({ ...newCard, degree: e.target.value });
+          }
+          {
+            card.company && setNewCard({ ...newCard, title: e.target.value });
+          }
         }}
       />
       <Input
