@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import Input from "./Input";
 
 function EditDialog({ card, dialogIsOpen }) {
-  console.log("card", card);
+  const [school, setSchool] = useState("");
+  const [degree, setDegree] = useState("");
+  const [desc, setDesc] = useState("");
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [newCard, setNewCard] = useState({});
   useEffect(() => {
     if (dialogIsOpen)
       document.getElementById("editDialog").setAttribute("open", true);
@@ -12,7 +17,9 @@ function EditDialog({ card, dialogIsOpen }) {
     setDesc(card.desc);
     setFrom(card.timeFrom);
     setTo(card.timeTo);
+    setNewCard(card);
   }, [
+    card,
     card.school,
     card.degree,
     card.desc,
@@ -20,11 +27,8 @@ function EditDialog({ card, dialogIsOpen }) {
     card.timeTo,
     dialogIsOpen,
   ]);
-  const [school, setSchool] = useState(card.school);
-  const [degree, setDegree] = useState(card.degree);
-  const [desc, setDesc] = useState(card.desc);
-  const [from, setFrom] = useState(card.timeFrom);
-  const [to, setTo] = useState(card.timeTo);
+  console.log("new card ", newCard);
+  console.log("card ", card);
 
   return (
     <dialog id="editDialog">
@@ -33,33 +37,48 @@ function EditDialog({ card, dialogIsOpen }) {
         name={school}
         type="text"
         value={school}
-        onChange={(e) => setSchool(e.target.value)}
+        onChange={(e) => {
+          setSchool(e.target.value);
+          setNewCard({ ...newCard, school: e.target.value });
+        }}
       />
       <Input
         label="Degree"
         name={degree}
         value={degree}
         type="text"
-        onChange={(e) => setDegree(e.target.value)}
+        onChange={(e) => {
+          setDegree(e.target.value);
+          setNewCard({ ...newCard, degree: e.target.value });
+        }}
       />
       <Input
         label="Desc"
         name={desc}
         value={desc}
         type="textarea"
-        onChange={(e) => setDesc(e.target.value)}
+        onChange={(e) => {
+          setDesc(e.target.value);
+          setNewCard({ ...newCard, desc: e.target.value });
+        }}
       />
       <Input
         label="From"
         value={from}
         type="date"
-        onChange={(e) => setFrom(e.target.value)}
+        onChange={(e) => {
+          setFrom(e.target.value);
+          setNewCard({ ...newCard, timeFrom: e.target.value });
+        }}
       />
       <Input
         label="To"
         name={to}
         value={to}
-        onChange={(e) => setTo(e.target.value)}
+        onChange={(e) => {
+          setTo(e.target.value);
+          setNewCard({ ...newCard, timeTo: e.target.value });
+        }}
         type="date"
       />
     </dialog>
