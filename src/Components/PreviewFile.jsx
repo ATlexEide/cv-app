@@ -1,6 +1,6 @@
 import "../styles/PreviewFile.css";
-import EducationCard from "./EducationCard";
-import PracticalCard from "./PracticalCard";
+import EducationCard from "./Cards/EducationCard";
+import PracticalCard from "./Cards/PracticalCard";
 import Border from "./Border";
 import { useState } from "react";
 import EditDialog from "./EditDialog";
