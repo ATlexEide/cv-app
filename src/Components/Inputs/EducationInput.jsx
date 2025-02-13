@@ -1,21 +1,15 @@
-import { useState } from "react";
 import "../../styles/EducationInput.css";
-function EducationInput({ label, name }) {
-  const [schoolInfo, setSchoolInfo] = useState({
-    schoolName: "",
-    to: "",
-    from: "",
-  });
+function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
     <section id="educationalExperience">
       <div>
         {/* TODO: REFACTOR INPUTS TO USE INPUT COMPONENT */}
-        <label htmlFor={name}>{label}: </label>
+        <label htmlFor="school">School: </label>
         <input
-          id={name}
+          id="school"
           type="text"
           onChange={(e) => {
-            setSchoolInfo({ ...schoolInfo, schoolName: e.target.value });
+            setSchoolInfo({ ...schoolInfo, school: e.target.value });
           }}
         />
       </div>
@@ -25,7 +19,7 @@ function EducationInput({ label, name }) {
           id="study"
           type="text"
           onChange={(e) => {
-            setSchoolInfo({ ...schoolInfo, study: e.target.value });
+            setSchoolInfo({ ...schoolInfo, degree: e.target.value });
           }}
         />
       </div>
@@ -34,7 +28,7 @@ function EducationInput({ label, name }) {
         id="dateFrom"
         type="date"
         onChange={(e) => {
-          setSchoolInfo({ ...schoolInfo, dateFrom: e.target.value });
+          setSchoolInfo({ ...schoolInfo, timeFrom: e.target.value });
         }}
       />
       <label htmlFor="dateTo">Study to</label>
@@ -42,7 +36,15 @@ function EducationInput({ label, name }) {
         id="dateTo"
         type="date"
         onChange={(e) => {
-          setSchoolInfo({ ...schoolInfo, dateTo: e.target.value });
+          setSchoolInfo({ ...schoolInfo, timeTo: e.target.value });
+        }}
+      />
+      <label htmlFor="desc">Desc</label>
+      <input
+        id="desc"
+        type="textarea"
+        onChange={(e) => {
+          setSchoolInfo({ ...schoolInfo, desc: e.target.value });
         }}
       />
     </section>
