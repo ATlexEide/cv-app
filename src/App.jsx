@@ -15,6 +15,7 @@ function App() {
     setPerson({ ...person, [e.target.name]: e.target.value });
     console.log(person);
   };
+
   return (
     <>
       <section id="inputs">
