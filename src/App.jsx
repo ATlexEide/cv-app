@@ -23,7 +23,7 @@ function App() {
       <section id="inputs">
         <DetailsForm person={person} callback={handleDetailChange} />
         <EducationalExpForm addCard={addCard} />
-        <PracticalExpForm />
+        <PracticalExpForm addCard={addCard} />
       </section>
       <section id="preview">
         <PreviewFile person={person} />

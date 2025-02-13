@@ -1,11 +1,11 @@
 import PracticalInput from "../Inputs/PracticalInput";
 
-function PracticalExpForm() {
+function PracticalExpForm({ addCard }) {
   return (
     <>
       <h2>Add practical experience</h2>
       <PracticalInput />
-      <button>Add experience</button>
+      <button onClick={addCard}>Add experience</button>
     </>
   );
 }
