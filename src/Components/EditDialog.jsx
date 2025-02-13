@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "./Input";
 
-function EditDialog({ card, dialogIsOpen, data, setData }) {
+function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
   const [school, setSchool] = useState("");
   const [degree, setDegree] = useState("");
   const [desc, setDesc] = useState("");
@@ -36,6 +36,7 @@ function EditDialog({ card, dialogIsOpen, data, setData }) {
       index === newCard.id ? newCard : item
     );
     setData(newData);
+    setDialogIsOpen(false);
   };
   return (
     <dialog id="editDialog">

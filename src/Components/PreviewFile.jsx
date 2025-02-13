@@ -66,6 +66,7 @@ function PreviewFile({ person }) {
         dialogIsOpen={isOpen}
         data={data}
         setData={setData}
+        setDialogIsOpen={setIsOpen}
       />
     </>
   );
