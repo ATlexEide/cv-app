@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/EducationInput.css";
+import "../../styles/EducationInput.css";
 function EducationInput({ label, name }) {
   const [schoolInfo, setSchoolInfo] = useState({
     schoolName: "",
