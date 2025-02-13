@@ -1,43 +1,28 @@
 import { useState } from "react";
 import EducationInput from "../Inputs/EducationInput";
 
-function EducationalExpForm({ addCard }) {
-  const testData = {
-    arna: {
-      schoolName: "arna",
-      from: "some time",
-      to: "some other time",
-      attendance: "probably alright",
-    },
-    holen: {
-      schoolName: "holen",
-      from: "some time",
-      to: "some other time",
-      attendance: "probably alright",
-    },
-    damsgård: {
-      schoolName: "damsgård",
-      from: "some time",
-      to: "some other time",
-      attendance: "probably alright",
-    },
-  };
-  const [education, setEducation] = useState(testData);
-  const handleDetailChange = (schoolInfo) => {
-    setEducation({ ...education, [schoolInfo.schoolName]: schoolInfo });
-    console.log(education);
-  };
+function EducationalExpForm({ education, addExperience }) {
+  const [schoolInfo, setSchoolInfo] = useState({
+    id: education.length,
+    school: "",
+    degree: "",
+    timeFrom: "",
+    timeTo: "",
+    desc: "",
+  });
 
   return (
     <>
       <h2>Education</h2>
-      <EducationInput
-        index={0}
-        label="School"
-        name="school"
-        callback={handleDetailChange}
-      />
-      <button onClick={addCard}>Add education</button>
+      <EducationInput schoolInfo={schoolInfo} setSchoolInfo={setSchoolInfo} />
+      <button
+        onClick={() => {
+          addExperience(schoolInfo);
+          setSchoolInfo({ ...schoolInfo, id: schoolInfo.id + 1 });
+        }}
+      >
+        Add education
+      </button>
     </>
   );
 }
