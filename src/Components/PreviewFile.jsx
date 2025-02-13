@@ -4,7 +4,13 @@ import PracticalCard from "./Cards/PracticalCard";
 import Border from "./Border";
 import { useState } from "react";
 import EditDialog from "./EditDialog";
-function PreviewFile({ education, setEducation, person }) {
+function PreviewFile({
+  practical,
+  setPractical,
+  education,
+  setEducation,
+  person,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCard, setCurrentCard] = useState({});
 
@@ -12,9 +18,14 @@ function PreviewFile({ education, setEducation, person }) {
     setCurrentCard(card);
     setIsOpen(true);
   };
-  const handleDeleteCard = (cardId) => {
+  // TODO: Clean this shit
+  const handleDeleteEducation = (cardId) => {
     setEducation(education.filter((card) => card.id !== cardId));
   };
+  const handleDeletePractical = (cardId) => {
+    setPractical(practical.filter((card) => card.id !== cardId));
+  };
+  // TODO END
   return (
     <>
       <article id="file">
@@ -32,7 +43,7 @@ function PreviewFile({ education, setEducation, person }) {
                 key={index}
                 data={school}
                 handleEdit={handleEditCard}
-                handleDelete={handleDeleteCard}
+                handleDelete={handleDeleteEducation}
               />
             );
           })}
@@ -40,7 +51,17 @@ function PreviewFile({ education, setEducation, person }) {
         <Border />
         <section id="practical">
           <h2 className="sectionTitle">Practical</h2>
-          <PracticalCard />
+          {practical.map((company, index) => {
+            console.log(company);
+            return (
+              <PracticalCard
+                key={index}
+                data={company}
+                handleEdit={handleEditCard}
+                handleDelete={handleDeletePractical}
+              />
+            );
+          })}
           <Border />
         </section>
       </article>
