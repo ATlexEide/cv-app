@@ -28,6 +28,7 @@ function EditDialog({ card, dialogIsOpen }) {
   const handleChange = (e) => {
     alert("yipp");
     console.log(e);
+    setDegree();
   };
   // TODO: Fix inputs
   return (
@@ -36,34 +37,34 @@ function EditDialog({ card, dialogIsOpen }) {
         label="School"
         name={school}
         type="text"
-        value=""
-        onChange={(e) => alert(e)}
+        value={school}
+        callback={(e) => setSchool(e.target.value)}
       />
       <Input
         label="Degree"
         name={degree}
         value={degree}
         type="text"
-        onChange={(e) => handleChange(e)}
+        callback={(e) => setDegree(e.target.value)}
       />
       <Input
         label="Desc"
         name={desc}
         value={desc}
         type="textarea"
-        onChange={(e) => handleChange(e)}
+        callback={(e) => setDesc(e.target.value)}
       />
       <Input
         label="From"
         value={from}
         type="date"
-        onChange={(e) => handleChange(e)}
+        callback={(e) => setFrom(e.target.value)}
       />
       <Input
         label="To"
         name={to}
         value={to}
-        onChange={(e) => handleChange(e)}
+        callback={(e) => setTo(e.target.value)}
         type="date"
       />
     </dialog>
