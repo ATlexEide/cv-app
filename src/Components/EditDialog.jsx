@@ -25,11 +25,7 @@ function EditDialog({ card, dialogIsOpen }) {
   const [desc, setDesc] = useState(card.desc);
   const [from, setFrom] = useState(card.timeFrom);
   const [to, setTo] = useState(card.timeTo);
-  const handleChange = (e) => {
-    alert("yipp");
-    console.log(e);
-    setDegree();
-  };
+
   // TODO: Fix inputs
   return (
     <dialog id="editDialog">
