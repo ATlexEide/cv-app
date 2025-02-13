@@ -1,4 +1,4 @@
-import "../styles/PreviewFile.css";
+import "../../styles/PreviewFile.css";
 function EducationCard({ data, handleEdit, handleDelete }) {
   return (
     <article>
