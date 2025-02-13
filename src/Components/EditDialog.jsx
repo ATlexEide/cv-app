@@ -36,6 +36,9 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
     setData(newData);
     setDialogIsOpen(false);
   };
+  const handleCancel = () => {
+    setDialogIsOpen(false);
+  };
   return (
     <dialog id="editDialog">
       <Input
@@ -88,6 +91,7 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
         type="date"
       />
       <button onClick={handleUpdate}>Apply changes</button>
+      <button onClick={handleCancel}>Cancel</button>
     </dialog>
   );
 }
