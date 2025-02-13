@@ -61,7 +61,12 @@ function PreviewFile({ person }) {
           <Border />
         </section>
       </article>
-      <EditDialog card={currentCard} dialogIsOpen={isOpen} />
+      <EditDialog
+        card={currentCard}
+        dialogIsOpen={isOpen}
+        data={data}
+        setData={setData}
+      />
     </>
   );
 }
