@@ -30,7 +30,7 @@ function EducationalExpForm({ addCard }) {
 
   return (
     <>
-      <h2>Add education</h2>
+      <h2>Education</h2>
       <EducationInput
         index={0}
         label="School"
