@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Input from "./Inputs/Input";
 import "../styles/Dialog.css";
-import "../styles/.css";
 // TODO: IMPLEMENT PROPER MODAL
 function EditDialog({
   card,
@@ -68,6 +67,7 @@ function EditDialog({
   };
   return (
     <dialog id="editDialog">
+      <h2>Edit entry</h2>
       <Input
         label={card.school ? "School" : "Company"}
         name={card.school ? school : company}
@@ -137,8 +137,12 @@ function EditDialog({
         }}
         type="date"
       />
-      <button onClick={handleUpdate}>Apply changes</button>
-      <button onClick={handleCancel}>Cancel</button>
+      <button className="applyBtn" onClick={handleUpdate}>
+        Apply changes
+      </button>
+      <button className="cancelBtn" onClick={handleCancel}>
+        Cancel
+      </button>
     </dialog>
   );
 }
