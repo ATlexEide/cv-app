@@ -2,7 +2,7 @@ import Input from "./Input";
 
 function PracticalInput({ practicalInfo, setPracticalInfo }) {
   return (
-    <>
+    <section id="practicalExperience">
       <Input
         label="Company"
         name="company"
@@ -41,7 +41,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
           setPracticalInfo({ ...practicalInfo, desc: e.target.value });
         }}
       />
-    </>
+    </section>
   );
 }
 export default PracticalInput;
