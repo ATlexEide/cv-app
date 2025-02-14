@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PracticalInput from "../Inputs/PracticalInput";
+import "../../styles/Form.css";
 
 function PracticalExpForm({ practical, addExperience }) {
   const [practicalInfo, setPracticalInfo] = useState({

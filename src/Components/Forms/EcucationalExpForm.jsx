@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EducationInput from "../Inputs/EducationInput";
+import "../../styles/Form.css";
 
 function EducationalExpForm({ education, addExperience }) {
   const [schoolInfo, setSchoolInfo] = useState({

@@ -1,5 +1,5 @@
 import Input from "../Inputs/Input";
-import "../../styles/DetailsForm.css";
+import "../../styles/Form.css";
 function DetailsForm({ person, callback }) {
   return (
     <form>
