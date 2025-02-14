@@ -7,25 +7,25 @@ function DetailsForm({ person, callback }) {
         label="First Name"
         name="firstName"
         value={person.firstName}
-        callback={callback}
+        onChange={callback}
       />
       <Input
         label="Last Name"
         name="lastName"
         value={person.lastName}
-        callback={callback}
+        onChange={callback}
       />
       <Input
         label="Email"
         name="email"
         value={person.email}
-        callback={callback}
+        onChange={callback}
       />
       <Input
         label="Phone"
         name="phone"
         value={person.phone}
-        callback={callback}
+        onChange={callback}
       />
     </form>
   );
