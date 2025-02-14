@@ -63,7 +63,7 @@ function App() {
     setPerson({ ...person, [e.target.name]: e.target.value });
     console.log(person);
   };
-  // TODO: Remove hardcoded value
+
   const addExperience = (exp, type) => {
     if (type === "education") setEducation([...education, exp]);
     if (type === "practical") setPractical([...practical, exp]);
