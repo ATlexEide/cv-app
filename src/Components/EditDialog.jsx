@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Input from "./Inputs/Input";
-
+import "../styles/Dialog.css";
+import "../styles/.css";
+// TODO: IMPLEMENT PROPER MODAL
 function EditDialog({
   card,
   dialogIsOpen,
