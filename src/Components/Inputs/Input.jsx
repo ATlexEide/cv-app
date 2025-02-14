@@ -1,6 +1,6 @@
 function Input({ label, name, type = "text", value, onChange }) {
   return (
-    <div>
+    <div className="input">
       <label htmlFor={name}>{label}: </label>
       {type === "textarea" ? (
         <textarea
