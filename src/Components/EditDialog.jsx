@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
 import Input from "./Inputs/Input";
 
-function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
+function EditDialog({
+  card,
+  dialogIsOpen,
+  setDialogIsOpen,
+  education,
+  setEducation,
+  practical,
+  setPractical,
+}) {
   // TODO: FIX IMMINENT MESS
   const [school, setSchool] = useState("");
   const [company, setCompany] = useState("");
@@ -41,11 +49,16 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
   ]);
 
   const handleUpdate = () => {
-    console.log(data);
+    let data;
+    card.school ? (data = education) : (data = practical);
     const newData = data.map((item, index) =>
       index === newCard.id ? newCard : item
     );
-    setData(newData);
+    if (card.school) {
+      setEducation(newData);
+    } else {
+      setPractical(newData);
+    }
     setDialogIsOpen(false);
   };
   const handleCancel = () => {
