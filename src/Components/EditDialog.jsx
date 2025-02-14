@@ -12,6 +12,7 @@ function EditDialog({ card, dialogIsOpen, setDialogIsOpen, data, setData }) {
   const [to, setTo] = useState("");
   const [newCard, setNewCard] = useState({});
   useEffect(() => {
+    console.log(card);
     if (dialogIsOpen)
       document.getElementById("editDialog").setAttribute("open", true);
     else document.getElementById("editDialog").removeAttribute("open");
