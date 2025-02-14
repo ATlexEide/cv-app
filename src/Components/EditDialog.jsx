@@ -65,7 +65,6 @@ function EditDialog({
     setDialogIsOpen(false);
   };
   return (
-    // TODO: Make inputs not hard coded
     <dialog id="editDialog">
       <Input
         label={card.school ? "School" : "Company"}
