@@ -3,4 +3,23 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding: 1em;
+}
+#root > section > section,
+form {
+  border: solid 2px whitesmoke;
+}
+input,
+label {
+  width: 50%;
+}
+.input {
+  display: flex;
+  justify-content: end;
+  padding: 0 1em;
+}
+button {
+  border: solid 1px whitesmoke;
+  width: 70%;
+  align-self: center;
 }
