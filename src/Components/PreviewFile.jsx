@@ -68,8 +68,10 @@ function PreviewFile({
       <EditDialog
         card={currentCard}
         dialogIsOpen={isOpen}
-        data={education}
-        setData={setEducation}
+        education={education}
+        setEducation={setEducation}
+        practical={practical}
+        setPractical={setPractical}
         setDialogIsOpen={setIsOpen}
       />
     </>
