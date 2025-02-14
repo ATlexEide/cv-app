@@ -1,47 +1,46 @@
 import "../../styles/EducationInput.css";
+import Input from "./Input";
 function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
     <section id="educationalExperience">
       <div>
         {/* TODO: REFACTOR INPUTS TO USE INPUT COMPONENT */}
-        <label htmlFor="school">School: </label>
-        <input
-          id="school"
-          type="text"
+        <Input
+          label="School"
+          name="school"
           onChange={(e) => {
             setSchoolInfo({ ...schoolInfo, school: e.target.value });
           }}
         />
       </div>
       <div>
-        <label htmlFor="study">Title of study</label>
-        <input
-          id="study"
-          type="text"
+        <Input
+          label="Study"
+          name="study"
           onChange={(e) => {
             setSchoolInfo({ ...schoolInfo, degree: e.target.value });
           }}
         />
       </div>
-      <label htmlFor="dateFrom">Study from</label>
-      <input
-        id="dateFrom"
+      <Input
+        label="From"
+        name="timeFrom"
         type="date"
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, timeFrom: e.target.value });
         }}
       />
-      <label htmlFor="dateTo">Study to</label>
-      <input
-        id="dateTo"
+      <Input
+        label="To"
+        name="timeTo"
         type="date"
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, timeTo: e.target.value });
         }}
       />
-      <label htmlFor="desc">Desc</label>
-      <input
-        id="desc"
+      <Input
+        label="Desc"
+        name="desc"
         type="textarea"
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, desc: e.target.value });
