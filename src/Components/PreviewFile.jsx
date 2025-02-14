@@ -47,7 +47,7 @@ function PreviewFile({
         </section>
         <Border />
         <section id="practical">
-          <h2 className="sectionTitle">Practical</h2>
+          <h2 className="sectionTitle">Practical experience</h2>
           {practical.map((company, index) => {
             console.log(company);
             return (
