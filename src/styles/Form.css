@@ -10,6 +10,7 @@ form {
   border: solid 2px whitesmoke;
 }
 input,
+textarea,
 label {
   width: 50%;
 }
