@@ -13,7 +13,7 @@ function EducationalExpForm({ education, addExperience }) {
   });
 
   return (
-    <>
+    <section>
       <h2>Education</h2>
       <EducationInput schoolInfo={schoolInfo} setSchoolInfo={setSchoolInfo} />
       <button
@@ -24,7 +24,7 @@ function EducationalExpForm({ education, addExperience }) {
       >
         Add education
       </button>
-    </>
+    </section>
   );
 }
 export default EducationalExpForm;
