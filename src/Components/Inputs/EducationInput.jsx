@@ -3,24 +3,20 @@ import Input from "./Input";
 function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
     <section id="educationalExperience">
-      <div>
-        <Input
-          label="School"
-          name="school"
-          onChange={(e) => {
-            setSchoolInfo({ ...schoolInfo, school: e.target.value });
-          }}
-        />
-      </div>
-      <div>
-        <Input
-          label="Study"
-          name="study"
-          onChange={(e) => {
-            setSchoolInfo({ ...schoolInfo, degree: e.target.value });
-          }}
-        />
-      </div>
+      <Input
+        label="School"
+        name="school"
+        onChange={(e) => {
+          setSchoolInfo({ ...schoolInfo, school: e.target.value });
+        }}
+      />
+      <Input
+        label="Study"
+        name="study"
+        onChange={(e) => {
+          setSchoolInfo({ ...schoolInfo, degree: e.target.value });
+        }}
+      />
       <Input
         label="From"
         name="timeFrom"
