@@ -21,7 +21,7 @@ function PracticalCard({ data, handleEdit, handleDelete }) {
       </button>
       <button
         onClick={() => {
-          handleDelete(data.id);
+          handleDelete(data.id, "practical");
         }}
       >
         Remove

@@ -19,11 +19,10 @@ function PreviewFile({
     setIsOpen(true);
   };
   // TODO: Clean this shit
-  const handleDeleteEducation = (cardId) => {
-    setEducation(education.filter((card) => card.id !== cardId));
-  };
-  const handleDeletePractical = (cardId) => {
-    setPractical(practical.filter((card) => card.id !== cardId));
+  const handleDelete = (cardId, type) => {
+    type === "education"
+      ? setEducation(education.filter((card) => card.id !== cardId))
+      : setPractical(practical.filter((card) => card.id !== cardId));
   };
   // TODO END
   return (
@@ -43,7 +42,7 @@ function PreviewFile({
                 key={index}
                 data={school}
                 handleEdit={handleEditCard}
-                handleDelete={handleDeleteEducation}
+                handleDelete={handleDelete}
               />
             );
           })}
@@ -58,7 +57,7 @@ function PreviewFile({
                 key={index}
                 data={company}
                 handleEdit={handleEditCard}
-                handleDelete={handleDeletePractical}
+                handleDelete={handleDelete}
               />
             );
           })}
