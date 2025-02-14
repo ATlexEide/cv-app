@@ -65,8 +65,6 @@ function App() {
   };
   // TODO: Remove hardcoded value
   const addExperience = (exp, type) => {
-    console.log("aaaaaaaaaaaaaaaa", exp);
-    console.log(practical);
     if (type === "education") setEducation([...education, exp]);
     if (type === "practical") setPractical([...practical, exp]);
   };
