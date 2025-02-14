@@ -18,13 +18,11 @@ function PreviewFile({
     setCurrentCard(card);
     setIsOpen(true);
   };
-  // TODO: Clean this shit
   const handleDelete = (cardId, type) => {
     type === "education"
       ? setEducation(education.filter((card) => card.id !== cardId))
       : setPractical(practical.filter((card) => card.id !== cardId));
   };
-  // TODO END
   return (
     <>
       <article id="file">
