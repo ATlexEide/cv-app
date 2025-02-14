@@ -4,7 +4,6 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
     <section id="educationalExperience">
       <div>
-        {/* TODO: REFACTOR INPUTS TO USE INPUT COMPONENT */}
         <Input
           label="School"
           name="school"
