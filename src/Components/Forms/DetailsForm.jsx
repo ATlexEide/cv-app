@@ -3,6 +3,7 @@ import "../../styles/Form.css";
 function DetailsForm({ person, callback }) {
   return (
     <form>
+      <h2>Personal info</h2>
       <Input
         label="First Name"
         name="firstName"
