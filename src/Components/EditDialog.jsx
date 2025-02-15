@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Input from "./Inputs/Input";
-import "../styles/Dialog.css";
+import "../styles/Edit.css";
 function EditDialog({
   card,
   dialogIsOpen,
