@@ -4,6 +4,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
     <section id="educationalExperience">
       <Input
+        className="expInput"
         label="School"
         name="school"
         onChange={(e) => {
@@ -11,6 +12,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         }}
       />
       <Input
+        className="expInput"
         label="Study"
         name="study"
         onChange={(e) => {
@@ -18,6 +20,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         }}
       />
       <Input
+        className="expInput"
         label="From"
         name="timeFrom"
         type="date"
@@ -26,6 +29,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         }}
       />
       <Input
+        className="expInput"
         label="To"
         name="timeTo"
         type="date"
@@ -34,6 +38,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         }}
       />
       <Input
+        className="expInput"
         label="Desc"
         name="desc"
         type="textarea"
