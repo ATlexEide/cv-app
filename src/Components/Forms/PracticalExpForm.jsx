@@ -19,6 +19,7 @@ function PracticalExpForm({ practical, addExperience }) {
         setPracticalInfo={setPracticalInfo}
       />
       <button
+        type="button"
         onClick={() => {
           console.log("practicalInfo", practicalInfo);
           addExperience(practicalInfo, "practical");

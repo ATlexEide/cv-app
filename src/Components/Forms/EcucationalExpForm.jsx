@@ -17,6 +17,7 @@ function EducationalExpForm({ education, addExperience }) {
       <h2>Education</h2>
       <EducationInput schoolInfo={schoolInfo} setSchoolInfo={setSchoolInfo} />
       <button
+        type="button"
         onClick={() => {
           addExperience(schoolInfo, "education");
           setSchoolInfo({ ...schoolInfo, id: schoolInfo.id + 1 });
