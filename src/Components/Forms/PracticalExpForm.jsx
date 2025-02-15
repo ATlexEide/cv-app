@@ -12,7 +12,7 @@ function PracticalExpForm({ practical, addExperience }) {
     desc: "",
   });
   return (
-    <section>
+    <form>
       <h2>Practical experience</h2>
       <PracticalInput
         practicalInfo={practicalInfo}
@@ -27,7 +27,7 @@ function PracticalExpForm({ practical, addExperience }) {
       >
         Add experience
       </button>
-    </section>
+    </form>
   );
 }
 export default PracticalExpForm;
