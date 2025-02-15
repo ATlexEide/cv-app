@@ -10,7 +10,7 @@ function EditDialog({
   practical,
   setPractical,
 }) {
-  // TODO: FIX IMMINENT MESS
+  // TODO: ACCEPT IMMINENT MESS
   const [school, setSchool] = useState("");
   const [company, setCompany] = useState("");
   const [title, setTitle] = useState("");
