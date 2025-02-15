@@ -1,4 +1,5 @@
 form {
+  margin-left: auto;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -11,11 +12,11 @@ form {
 input,
 textarea,
 label {
-  width: 50%;
+  width: 100%;
 }
-.input {
+.expInput {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   padding: 0 1em;
 }
 form > button {
