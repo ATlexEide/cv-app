@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import Input from "./Inputs/Input";
-import "../styles/Edit.css";
+import "../styles/Form.css";
 function EditDialog({
   card,
   dialogIsOpen,
-  setDialogIsOpen,
   education,
   setEducation,
   practical,
   setPractical,
+  setIsEditing,
 }) {
   // TODO: ACCEPT IMMINENT MESS
   const [school, setSchool] = useState("");
@@ -59,13 +59,13 @@ function EditDialog({
     } else {
       setPractical(newData);
     }
-    setDialogIsOpen(false);
+    setIsEditing(false);
   };
   const handleCancel = () => {
-    setDialogIsOpen(false);
+    setIsEditing(false);
   };
   return (
-    <dialog id="editDialog">
+    <form id="editDialog">
       <h2>Edit entry</h2>
       <Input
         label={card.school ? "School" : "Company"}
@@ -142,7 +142,7 @@ function EditDialog({
       <button className="cancelBtn" onClick={handleCancel}>
         Cancel
       </button>
-    </dialog>
+    </form>
   );
 }
 export default EditDialog;

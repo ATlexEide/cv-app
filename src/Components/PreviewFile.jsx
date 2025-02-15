@@ -2,21 +2,18 @@ import "../styles/PreviewFile.css";
 import EducationCard from "./Cards/EducationCard";
 import PracticalCard from "./Cards/PracticalCard";
 import Border from "./Border";
-import { useState } from "react";
-import EditDialog from "./EditDialog";
 function PreviewFile({
   practical,
   setPractical,
   education,
   setEducation,
   person,
+  setCurrentCard,
+  setIsEditing,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentCard, setCurrentCard] = useState({});
-
   const handleEditCard = (card) => {
     setCurrentCard(card);
-    setIsOpen(true);
+    setIsEditing(true);
   };
   const handleDelete = (cardId, type) => {
     type === "education"
@@ -62,15 +59,6 @@ function PreviewFile({
           <Border />
         </section>
       </article>
-      <EditDialog
-        card={currentCard}
-        dialogIsOpen={isOpen}
-        education={education}
-        setEducation={setEducation}
-        practical={practical}
-        setPractical={setPractical}
-        setDialogIsOpen={setIsOpen}
-      />
     </>
   );
 }
