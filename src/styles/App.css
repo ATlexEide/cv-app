@@ -1,10 +1,10 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 7rem;
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 210mm;
 }
 @media print {
   body {

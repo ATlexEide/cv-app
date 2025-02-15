@@ -4,6 +4,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
   return (
     <section id="practicalExperience">
       <Input
+        className="expInput"
         label="Company"
         name="company"
         onChange={(e) => {
@@ -11,6 +12,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         }}
       />
       <Input
+        className="expInput"
         label="Title"
         name="title"
         onChange={(e) => {
@@ -18,6 +20,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         }}
       />
       <Input
+        className="expInput"
         type="date"
         label="From"
         name="timeFrom"
@@ -26,6 +29,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         }}
       />
       <Input
+        className="expInput"
         type="date"
         label="To"
         name="timeTo"
@@ -34,6 +38,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         }}
       />
       <Input
+        className="expInput"
         type="textarea"
         label="Desc"
         name="desc"
