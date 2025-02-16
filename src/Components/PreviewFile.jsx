@@ -49,7 +49,7 @@ function PreviewFile({
             );
           })}
         </section>
-        <Border />
+        <hr />
         <section id="practical">
           <h2 className="sectionTitle">Practical experience</h2>
           {practical.map((company, index) => {
@@ -63,7 +63,6 @@ function PreviewFile({
               />
             );
           })}
-          <Border />
         </section>
       </article>
     </>
