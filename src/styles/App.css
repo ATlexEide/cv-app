@@ -5,7 +5,16 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 210mm;
+  gap: 2em;
 }
+#inputs {
+  border-radius: 25px;
+  width: 50%;
+  background-color: white;
+  justify-self: end;
+  color: black;
+}
+
 @media print {
   body {
     visibility: hidden;
