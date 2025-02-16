@@ -10,6 +10,7 @@
 #inputs {
   border-radius: 25px;
   width: 50%;
+  height: fit-content;
   background-color: white;
   justify-self: end;
   color: black;
