@@ -1,9 +1,25 @@
 function PracticalCard({ data, handleEdit, handleDelete }) {
   return (
-    <article>
+    <article className="card">
       <div id="heading">
         <span id="date-practical">{`${data.timeFrom} -> ${data.timeTo}`}</span>
         <h3 id="company">{data.company}</h3>
+        <div className="cardbuttons">
+          <button
+            onClick={() => {
+              handleEdit(data);
+            }}
+          >
+            Edit
+          </button>
+          <button
+            onClick={() => {
+              handleDelete(data.id, "practical");
+            }}
+          >
+            Remove
+          </button>
+        </div>
       </div>
       <h4 id="title">{data.title}</h4>
       {data.desc && (
@@ -12,20 +28,6 @@ function PracticalCard({ data, handleEdit, handleDelete }) {
           <p id="desc-practical">{data.desc}</p>
         </div>
       )}
-      <button
-        onClick={() => {
-          handleEdit(data);
-        }}
-      >
-        Edit
-      </button>
-      <button
-        onClick={() => {
-          handleDelete(data.id, "practical");
-        }}
-      >
-        Remove
-      </button>
     </article>
   );
 }
