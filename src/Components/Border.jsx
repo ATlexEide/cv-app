@@ -2,7 +2,7 @@ function Border({ style = "solid", size = "1px", color = "black" }) {
   return (
     <div
       style={{
-        border: `${style} ${size} ${color}`,
+        borderBottom: `${style} ${size} ${color}`,
       }}
     ></div>
   );
