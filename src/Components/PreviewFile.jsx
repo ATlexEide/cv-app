@@ -23,7 +23,7 @@ function PreviewFile({
   return (
     <>
       <article id="file">
-        <h2>
+        <h2 id="title">
           {person.firstName ? person.firstName : "{ Firstname } "} &nbsp;
           {person.lastName ? person.lastName : "{ Lastname }"}
         </h2>
