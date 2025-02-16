@@ -7,6 +7,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         className="expInput"
         label="Company"
         name="company"
+        placeholder={true}
         onChange={(e) => {
           setPracticalInfo({ ...practicalInfo, company: e.target.value });
         }}
@@ -15,6 +16,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         className="expInput"
         label="Title"
         name="title"
+        placeholder={true}
         onChange={(e) => {
           setPracticalInfo({ ...practicalInfo, title: e.target.value });
         }}
@@ -24,6 +26,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         type="date"
         label="From"
         name="timeFrom"
+        placeholder={true}
         onChange={(e) => {
           setPracticalInfo({ ...practicalInfo, timeFrom: e.target.value });
         }}
@@ -33,6 +36,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         type="date"
         label="To"
         name="timeTo"
+        placeholder={true}
         onChange={(e) => {
           setPracticalInfo({ ...practicalInfo, timeTo: e.target.value });
         }}
@@ -42,6 +46,7 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
         type="textarea"
         label="Desc"
         name="desc"
+        placeholder={true}
         onChange={(e) => {
           setPracticalInfo({ ...practicalInfo, desc: e.target.value });
         }}
@@ -50,4 +55,3 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
   );
 }
 export default PracticalInput;
-// (company name, position title, main responsibilities of your jobs, date from and until when you worked for that company)

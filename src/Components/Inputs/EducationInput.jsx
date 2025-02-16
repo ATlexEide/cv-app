@@ -7,6 +7,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         className="expInput"
         label="School"
         name="school"
+        placeholder={true}
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, school: e.target.value });
         }}
@@ -15,6 +16,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         className="expInput"
         label="Study"
         name="study"
+        placeholder={true}
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, degree: e.target.value });
         }}
@@ -24,6 +26,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         label="From"
         name="timeFrom"
         type="date"
+        placeholder={true}
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, timeFrom: e.target.value });
         }}
@@ -33,6 +36,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         label="To"
         name="timeTo"
         type="date"
+        placeholder={true}
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, timeTo: e.target.value });
         }}
@@ -42,6 +46,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
         label="Desc"
         name="desc"
         type="textarea"
+        placeholder={true}
         onChange={(e) => {
           setSchoolInfo({ ...schoolInfo, desc: e.target.value });
         }}
