@@ -78,11 +78,13 @@ function App() {
         {!isEditing && (
           <>
             <DetailsForm person={person} callback={handleDetailChange} />
+            <hr />
             <EducationalExpForm
               education={education}
               setEducation={setEducation}
               addExperience={addExperience}
             />
+            <hr />
             <PracticalExpForm
               practical={practical}
               setPractical={setPractical}
