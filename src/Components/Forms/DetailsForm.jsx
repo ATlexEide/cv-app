@@ -6,6 +6,7 @@ function DetailsForm({ person, callback }) {
       <h2>Personal info</h2>
       <form>
         <Input
+          className="personalInput"
           label="First Name"
           name="firstName"
           value={person.firstName}
@@ -13,6 +14,7 @@ function DetailsForm({ person, callback }) {
           onChange={callback}
         />
         <Input
+          className="personalInput"
           label="Last Name"
           name="lastName"
           value={person.lastName}
@@ -20,6 +22,7 @@ function DetailsForm({ person, callback }) {
           onChange={callback}
         />
         <Input
+          className="personalInput"
           label="Email"
           name="email"
           value={person.email}
@@ -27,6 +30,7 @@ function DetailsForm({ person, callback }) {
           onChange={callback}
         />
         <Input
+          className="personalInput"
           label="Phone"
           name="phone"
           value={person.phone}
