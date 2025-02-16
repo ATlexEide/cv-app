@@ -23,7 +23,10 @@ function PreviewFile({
   return (
     <>
       <article id="file">
-        <h2>{`${person.firstName} ${person.lastName}`}</h2>
+        <h2>
+          {person.firstName ? person.firstName : "{ Firstname } "} &nbsp;
+          {person.lastName ? person.lastName : "{ Lastname }"}
+        </h2>
         <section id="contact-info">
           <span id="email">{`Email: ${person.email}`}</span>
           <span id="phonenumber">{`Tlf: ${person.phone}`}</span>
