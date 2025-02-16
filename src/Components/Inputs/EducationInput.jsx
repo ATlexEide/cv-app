@@ -1,4 +1,3 @@
-import "../../styles/EducationInput.css";
 import Input from "./Input";
 function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
