@@ -31,10 +31,8 @@ hr {
 #inputs h2:first-child {
   margin-top: 1.5em;
 }
-form label input,
-textarea,
-.expInput,
-.personalInput {
+input,
+textarea {
   width: 100%;
   color: black;
   padding: 0 1em;
