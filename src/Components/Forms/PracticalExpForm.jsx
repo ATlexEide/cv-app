@@ -13,7 +13,7 @@ function PracticalExpForm({ practical, addExperience }) {
   });
   return (
     <>
-      <h2>Practical experience</h2>
+      <h2>PRACTICAL EXPERIENCE</h2>
       <form>
         <PracticalInput
           practicalInfo={practicalInfo}

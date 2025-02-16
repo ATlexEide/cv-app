@@ -3,7 +3,7 @@ import "../../styles/Form.css";
 function DetailsForm({ person, callback }) {
   return (
     <>
-      <h2>Personal info</h2>
+      <h2>PERSONAL INFO</h2>
       <form>
         <Input
           className="personalInput"
