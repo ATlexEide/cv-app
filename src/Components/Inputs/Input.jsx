@@ -1,4 +1,12 @@
-function Input({ label, name, type = "text", value, onChange, className }) {
+function Input({
+  label,
+  name,
+  type = "text",
+  value,
+  onChange,
+  className,
+  placeholder,
+}) {
   return (
     <div className="input">
       <label htmlFor={name}>{label}: </label>
@@ -10,6 +18,7 @@ function Input({ label, name, type = "text", value, onChange, className }) {
           type={type}
           value={value}
           onChange={onChange}
+          placeholder={placeholder && value}
         />
       ) : (
         <input
@@ -19,6 +28,7 @@ function Input({ label, name, type = "text", value, onChange, className }) {
           type={type}
           value={value}
           onChange={onChange}
+          placeholder={placeholder && value}
         />
       )}
     </div>
