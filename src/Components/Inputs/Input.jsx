@@ -18,7 +18,7 @@ function Input({
           type={type}
           value={value}
           onChange={onChange}
-          placeholder={placeholder && label}
+          placeholder={placeholder ? label : ""}
         />
       ) : (
         <input
@@ -28,7 +28,7 @@ function Input({
           type={type}
           value={value}
           onChange={onChange}
-          placeholder={placeholder && value}
+          placeholder={placeholder ? label : ""}
         />
       )}
     </div>
