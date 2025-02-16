@@ -11,7 +11,7 @@ form {
   padding: 1em;
 }
 hr {
-  width: 50%;
+  width: 80%;
   place-self: center;
   margin: 3em;
   border: none;
@@ -22,7 +22,7 @@ hr {
   height: var(--creature-height);
   background: url("/cv-app/creature.png") no-repeat;
   background-size: var(--creature-height);
-  background-position: 2em center;
+  background-position: 4em center;
 }
 #inputs h2 {
   letter-spacing: 0.2em;
