@@ -20,7 +20,7 @@ hr {
 #creature {
   margin-top: var(--creature-height-margin);
   height: var(--creature-height);
-  background: url("/cv-app/creature.png") no-repeat;
+  background: url("/cv-app/creatureCropped.png") no-repeat;
   background-size: var(--creature-height);
   background-position: 4em center;
 }
