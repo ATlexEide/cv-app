@@ -1,26 +1,73 @@
+:root {
+  --creature-height: 59px;
+  --creature-height-margin: var(--creature-height) / 2;
+}
 form {
+  width: 100%;
   margin-left: auto;
-  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   padding: 1em;
-  border: solid 2px whitesmoke;
-  place-self: center;
 }
-
-input,
+hr {
+  width: 50%;
+  place-self: center;
+  margin: 3em;
+  border: none;
+  border-bottom: solid 1px;
+}
+#creature {
+  margin-top: var(--creature-height-margin);
+  height: var(--creature-height);
+  background: url("/cv-app/creature.png") no-repeat;
+  background-size: var(--creature-height);
+  background-position: 2em center;
+}
+#inputs h2 {
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+}
+#inputs h2:first-child {
+  margin-top: 1.5em;
+}
+form label input,
 textarea,
-label {
+.expInput,
+.personalInput {
   width: 100%;
+  color: black;
+  padding: 0 1em;
+}
+label {
+  display: block;
+  text-align: start;
+  font-weight: 700;
+}
+input,
+textarea {
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 2px 2px 0px black;
+  height: 3em;
+}
+textarea {
+  height: 6em;
 }
 .expInput {
   display: flex;
   justify-content: center;
-  padding: 0 1em;
 }
 form > button {
   border: solid 1px whitesmoke;
-  width: 70%;
+  padding: 1em;
+  width: 100%;
   align-self: center;
+}
+
+.applyBtn {
+  background-color: rgb(0, 92, 0);
+}
+.cancelBtn {
+  background-color: rgb(156, 5, 5);
 }
