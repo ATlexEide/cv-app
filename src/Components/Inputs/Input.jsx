@@ -18,7 +18,7 @@ function Input({
           type={type}
           value={value}
           onChange={onChange}
-          placeholder={placeholder && name}
+          placeholder={placeholder && label}
         />
       ) : (
         <input
