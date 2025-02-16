@@ -13,19 +13,21 @@ function EducationalExpForm({ education, addExperience }) {
   });
 
   return (
-    <form>
+    <>
       <h2>Education</h2>
-      <EducationInput schoolInfo={schoolInfo} setSchoolInfo={setSchoolInfo} />
-      <button
-        type="button"
-        onClick={() => {
-          addExperience(schoolInfo, "education");
-          setSchoolInfo({ ...schoolInfo, id: schoolInfo.id + 1 });
-        }}
-      >
-        Add education
-      </button>
-    </form>
+      <form>
+        <EducationInput schoolInfo={schoolInfo} setSchoolInfo={setSchoolInfo} />
+        <button
+          type="button"
+          onClick={() => {
+            addExperience(schoolInfo, "education");
+            setSchoolInfo({ ...schoolInfo, id: schoolInfo.id + 1 });
+          }}
+        >
+          Add education
+        </button>
+      </form>
+    </>
   );
 }
 export default EducationalExpForm;

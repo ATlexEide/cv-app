@@ -12,23 +12,25 @@ function PracticalExpForm({ practical, addExperience }) {
     desc: "",
   });
   return (
-    <form>
+    <>
       <h2>Practical experience</h2>
-      <PracticalInput
-        practicalInfo={practicalInfo}
-        setPracticalInfo={setPracticalInfo}
-      />
-      <button
-        type="button"
-        onClick={() => {
-          console.log("practicalInfo", practicalInfo);
-          addExperience(practicalInfo, "practical");
-          setPracticalInfo({ ...practicalInfo, id: practicalInfo.id + 1 });
-        }}
-      >
-        Add experience
-      </button>
-    </form>
+      <form>
+        <PracticalInput
+          practicalInfo={practicalInfo}
+          setPracticalInfo={setPracticalInfo}
+        />
+        <button
+          type="button"
+          onClick={() => {
+            console.log("practicalInfo", practicalInfo);
+            addExperience(practicalInfo, "practical");
+            setPracticalInfo({ ...practicalInfo, id: practicalInfo.id + 1 });
+          }}
+        >
+          Add experience
+        </button>
+      </form>
+    </>
   );
 }
 export default PracticalExpForm;
