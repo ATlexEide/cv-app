@@ -28,8 +28,12 @@ function PreviewFile({
           {person.lastName ? person.lastName : "{ Lastname }"}
         </h2>
         <section id="contact-info">
-          <span id="email">{`Email: ${person.email}`}</span>
-          <span id="phonenumber">{`Tlf: ${person.phone}`}</span>
+          <span id="email">
+            {person.email ? `Email: ${person.email}` : "Email: your@email.com"}
+          </span>
+          <span id="phonenumber">
+            {person.phone ? `Phone: ${person.phone}` : "Phone: 123 45 678"}
+          </span>
         </section>
         <Border />
         <section id="education">
