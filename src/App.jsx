@@ -78,7 +78,9 @@ function App() {
         {!isEditing && (
           <>
             <DetailsForm person={person} callback={handleDetailChange} />
-            <hr />
+
+            <hr id="creature" />
+
             <EducationalExpForm
               education={education}
               setEducation={setEducation}
