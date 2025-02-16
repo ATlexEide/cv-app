@@ -2,7 +2,7 @@ import "../../styles/EducationInput.css";
 import Input from "./Input";
 function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
-    <section id="educationalExperience">
+    <>
       <Input
         className="expInput"
         label="School"
@@ -51,7 +51,7 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
           setSchoolInfo({ ...schoolInfo, desc: e.target.value });
         }}
       />
-    </section>
+    </>
   );
 }
 export default EducationInput;
