@@ -36,6 +36,7 @@ textarea {
   width: 100%;
   color: black;
   padding: 0 1em;
+  resize: vertical;
 }
 label {
   display: block;
