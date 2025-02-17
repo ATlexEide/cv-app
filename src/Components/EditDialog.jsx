@@ -51,8 +51,8 @@ function EditDialog({
   const handleUpdate = () => {
     let data;
     card.school ? (data = education) : (data = practical);
-    const newData = data.map((item, index) =>
-      index === newCard.id ? newCard : item
+    const newData = data.map((item) =>
+      item.id === newCard.id ? newCard : item
     );
     if (card.school) {
       setEducation(newData);
