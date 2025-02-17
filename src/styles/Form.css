@@ -70,3 +70,7 @@ form > button {
 .cancelBtn {
   background-color: rgb(156, 5, 5);
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 100px;
+  height: 100px;
+}
