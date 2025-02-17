@@ -24,7 +24,7 @@ function PracticalExpForm({ practical, addExperience }) {
           onClick={() => {
             console.log("practicalInfo", practicalInfo);
             addExperience(practicalInfo, "practical");
-            setPracticalInfo({ ...practicalInfo, id: practicalInfo.id + 1 });
+            setPracticalInfo({ ...practicalInfo, id: crypto.randomUUID() });
           }}
         >
           Add experience

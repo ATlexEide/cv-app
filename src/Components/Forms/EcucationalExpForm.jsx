@@ -21,7 +21,7 @@ function EducationalExpForm({ education, addExperience }) {
           type="button"
           onClick={() => {
             addExperience(schoolInfo, "education");
-            setSchoolInfo({ ...schoolInfo, id: schoolInfo.id + 1 });
+            setSchoolInfo({ ...schoolInfo, id: crypto.randomUUID() });
           }}
         >
           Add education
