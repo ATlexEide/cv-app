@@ -9,7 +9,7 @@ function App() {
   // TODO: Remove testdata when done
   const testData = [
     {
-      id: 0,
+      id: crypto.randomUUID(),
       school: "Holen",
       degree: "Comp Science",
       timeFrom: "2001-01-01",
@@ -17,7 +17,7 @@ function App() {
       desc: "asdaqdasdasd",
     },
     {
-      id: 1,
+      id: crypto.randomUUID(),
       school: "Damsgård",
       degree: "Science Science",
       timeFrom: "2001-01-01",
@@ -25,7 +25,7 @@ function App() {
       desc: "asdaqdasdasd",
     },
     {
-      id: 2,
+      id: crypto.randomUUID(),
       school: "UwU School",
       degree: "Furry Science",
       timeFrom: "2001-01-01",
@@ -35,7 +35,7 @@ function App() {
   ];
   const testData2 = [
     {
-      id: 0,
+      id: crypto.randomUUID(),
       company: "Some workplace",
       title: "Comp Science",
       timeFrom: "2001-01-01",
@@ -43,7 +43,7 @@ function App() {
       desc: "asdaqdasdasd",
     },
     {
-      id: 1,
+      id: crypto.randomUUID(),
       company: "Some other workplace",
       title: "Science Science",
       timeFrom: "2001-01-01",
