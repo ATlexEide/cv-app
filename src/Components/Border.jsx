@@ -7,4 +7,5 @@ function Border({ style = "solid", size = "1px", color = "black" }) {
     ></div>
   );
 }
+
 export default Border;

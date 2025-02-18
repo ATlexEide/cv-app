@@ -15,6 +15,7 @@ function PreviewFile({
     setCurrentCard(card);
     setIsEditing(true);
   };
+
   const handleDelete = (cardId, type) => {
     type === "education"
       ? setEducation(education.filter((card) => card.id !== cardId))
@@ -28,17 +29,22 @@ function PreviewFile({
           {person.firstName ? person.firstName : "{ Firstname } "} &nbsp;
           {person.lastName ? person.lastName : "{ Lastname }"}
         </h2>
+
         <section id="contact-info">
           <span id="email">
             {person.email ? `Email: ${person.email}` : "Email: your@email.com"}
           </span>
+
           <span id="phonenumber">
             {person.phone ? `Phone: ${person.phone}` : "Phone: 123 45 678"}
           </span>
         </section>
+
         <Border />
+
         <section id="education">
           <h2 className="sectionTitle">Education</h2>
+
           {education.map((school, index) => {
             return (
               <Card
@@ -50,9 +56,12 @@ function PreviewFile({
             );
           })}
         </section>
+
         <hr />
+
         <section id="practical">
           <h2 className="sectionTitle">Practical experience</h2>
+
           {practical.map((company, index) => {
             return (
               <Card
@@ -68,4 +77,5 @@ function PreviewFile({
     </>
   );
 }
+
 export default PreviewFile;

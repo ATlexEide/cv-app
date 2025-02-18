@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "./Inputs/Input";
 import "../styles/Form.css";
+
 function EditDialog({
   card,
   dialogIsOpen,
@@ -10,7 +11,7 @@ function EditDialog({
   setPractical,
   setIsEditing,
 }) {
-  // TODO: ACCEPT IMMINENT MESS
+  // states called with id passed in eval further down
   const [school, setSchool] = useState("");
   const [company, setCompany] = useState("");
   const [title, setTitle] = useState("");
@@ -19,6 +20,7 @@ function EditDialog({
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [newCard, setNewCard] = useState({});
+
   useEffect(() => {
     console.log(card);
     if (dialogIsOpen)
@@ -61,6 +63,7 @@ function EditDialog({
     }
     setIsEditing(false);
   };
+
   const handleCancel = () => {
     setIsEditing(false);
   };
@@ -124,10 +127,12 @@ function EditDialog({
       <button className="applyBtn" onClick={handleUpdate}>
         Apply changes
       </button>
+
       <button className="cancelBtn" onClick={handleCancel}>
         Cancel
       </button>
     </form>
   );
 }
+
 export default EditDialog;

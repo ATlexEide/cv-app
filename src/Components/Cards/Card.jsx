@@ -9,7 +9,9 @@ function Card({ data, handleEdit, handleDelete }) {
     <article className="card">
       <div id="heading">
         <span id="date">{`${data.from} -> ${data.to}`}</span>
+
         <h3 id={type}>{place}</h3>
+
         <div className="cardbuttons">
           <button
             onClick={() => {
@@ -18,6 +20,7 @@ function Card({ data, handleEdit, handleDelete }) {
           >
             Edit
           </button>
+
           <button
             onClick={() => {
               handleDelete(data.id, type);
@@ -27,14 +30,18 @@ function Card({ data, handleEdit, handleDelete }) {
           </button>
         </div>
       </div>
+
       <h4 id={designation}>{designation}</h4>
+
       {data.desc && (
         <>
           <h5>Extra info:</h5>
+
           <p id="desc">{data.desc}</p>
         </>
       )}
     </article>
   );
 }
+
 export default Card;

@@ -16,6 +16,7 @@ function Input({ label, name, type, value, onChange, className, placeholder }) {
   return (
     <div className="input">
       <label htmlFor={name}>{label}: </label>
+
       {type === "textarea" ? (
         <textarea
           className={className}
@@ -40,4 +41,5 @@ function Input({ label, name, type, value, onChange, className, placeholder }) {
     </div>
   );
 }
+
 export default Input;

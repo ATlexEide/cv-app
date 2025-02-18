@@ -1,9 +1,11 @@
 import Input from "../Inputs/Input";
 import "../../styles/Form.css";
+
 function DetailsForm({ person, callback }) {
   return (
     <>
       <h2>PERSONAL INFO</h2>
+
       <form>
         <Input
           className="personalInput"
@@ -13,6 +15,7 @@ function DetailsForm({ person, callback }) {
           placeholder={true}
           onChange={callback}
         />
+
         <Input
           className="personalInput"
           label="Last Name"
@@ -21,6 +24,7 @@ function DetailsForm({ person, callback }) {
           placeholder={true}
           onChange={callback}
         />
+
         <Input
           className="personalInput"
           label="Email"
@@ -29,6 +33,7 @@ function DetailsForm({ person, callback }) {
           placeholder={true}
           onChange={callback}
         />
+
         <Input
           className="personalInput"
           label="Phone"
@@ -41,4 +46,5 @@ function DetailsForm({ person, callback }) {
     </>
   );
 }
+
 export default DetailsForm;

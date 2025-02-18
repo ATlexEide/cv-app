@@ -44,7 +44,9 @@ function App() {
               setEducation={setEducation}
               addExperience={addExperience}
             />
+
             <hr />
+
             <ExperienceForm
               data={practical}
               title="PRACTICAL EXPERIENCE"
@@ -65,6 +67,7 @@ function App() {
           />
         )}
       </section>
+
       <section id="preview">
         <PreviewFile
           practical={practical}

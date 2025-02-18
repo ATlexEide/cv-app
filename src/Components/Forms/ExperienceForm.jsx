@@ -19,6 +19,7 @@ function ExperienceForm({ title, addExperience }) {
   return (
     <>
       <h2>{title}</h2>
+
       <form>
         {inputs.map((input) => (
           <Input
@@ -36,6 +37,7 @@ function ExperienceForm({ title, addExperience }) {
             }}
           />
         ))}
+
         <button
           type="button"
           onClick={() => {
@@ -49,4 +51,5 @@ function ExperienceForm({ title, addExperience }) {
     </>
   );
 }
+
 export default ExperienceForm;
