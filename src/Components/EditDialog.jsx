@@ -67,7 +67,24 @@ function EditDialog({
   return (
     <form id="editDialog">
       <h2>Edit entry</h2>
-      <Input
+
+      {Object.keys(card).map(
+        (input) =>
+          input !== "id" && (
+            <Input
+              key={input}
+              className="expInput"
+              label={Array.from(input)
+                .toSpliced(0, 1, input.at(0).toUpperCase())
+                .join("")}
+              type={input}
+              name={input.toLowerCase()}
+              placeholder={true}
+              onChange={(e) => {}}
+            />
+          )
+      )}
+      {/* <Input
         label={card.school ? "School" : "Company"}
         name={card.school ? school : company}
         type="text"
@@ -135,7 +152,7 @@ function EditDialog({
           setNewCard({ ...newCard, timeTo: e.target.value });
         }}
         type="date"
-      />
+      /> */}
       <button className="applyBtn" onClick={handleUpdate}>
         Apply changes
       </button>
