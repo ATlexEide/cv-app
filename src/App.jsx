@@ -5,6 +5,7 @@ import DetailsForm from "./Components/Forms/DetailsForm";
 import ExperienceForm from "./Components/Forms/ExperienceForm";
 import PreviewFile from "./Components/PreviewFile";
 import EditDialog from "./Components/EditDialog";
+
 function App() {
   const [person, setPerson] = useState({
     firstName: "Navn",
@@ -12,6 +13,7 @@ function App() {
     email: "mail@mail.no",
     phone: "12345678",
   });
+
   const [education, setEducation] = useState(educationData);
   const [practical, setPractical] = useState(practicalData);
   const [isEditing, setIsEditing] = useState(false);
@@ -26,6 +28,7 @@ function App() {
     if (type === "education") setEducation([...education, exp]);
     if (type === "practical") setPractical([...practical, exp]);
   };
+
   return (
     <>
       <section id="inputs">
