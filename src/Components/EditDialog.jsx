@@ -12,6 +12,7 @@ function EditDialog({
   setIsEditing,
 }) {
   // states called with id passed in eval further down
+  //eslint-disable
   const [school, setSchool] = useState("");
   const [company, setCompany] = useState("");
   const [title, setTitle] = useState("");
@@ -20,6 +21,7 @@ function EditDialog({
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [newCard, setNewCard] = useState({});
+  //eslint-enable
 
   useEffect(() => {
     console.log(card);
