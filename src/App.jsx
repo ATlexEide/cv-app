@@ -1,8 +1,7 @@
 import "./styles/App.css";
 import { useState } from "react";
 import DetailsForm from "./Components/Forms/DetailsForm";
-import EducationalExpForm from "./Components/Forms/EcucationalExpForm";
-import PracticalExpForm from "./Components/Forms/PracticalExpForm";
+import ExperienceForm from "./Components/Forms/ExperienceForm";
 import PreviewFile from "./Components/PreviewFile";
 import EditDialog from "./Components/EditDialog";
 function App() {
@@ -81,14 +80,16 @@ function App() {
 
             <hr id="creature" />
 
-            <EducationalExpForm
-              education={education}
+            <ExperienceForm
+              data={education}
+              title="EDUCATION"
               setEducation={setEducation}
               addExperience={addExperience}
             />
             <hr />
-            <PracticalExpForm
-              practical={practical}
+            <ExperienceForm
+              data={practical}
+              title="PRACTICAL EXPERIENCE"
               setPractical={setPractical}
               addExperience={addExperience}
             />
