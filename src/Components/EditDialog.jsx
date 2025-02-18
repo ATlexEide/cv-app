@@ -33,8 +33,8 @@ function EditDialog({
       setTitle(card.title);
     }
     setDesc(card.desc);
-    setFrom(card.timeFrom);
-    setTo(card.timeTo);
+    setFrom(card.from);
+    setTo(card.to);
     setNewCard(card);
   }, [
     card,
