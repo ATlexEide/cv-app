@@ -26,8 +26,8 @@ function PreviewFile({
     <>
       <article id="file">
         <h2 id="title">
-          {person.firstName ? person.firstName : "{ Firstname } "} &nbsp;
-          {person.lastName ? person.lastName : "{ Lastname }"}
+          {person.firstname ? person.firstname : "{ Firstname } "} &nbsp;
+          {person.lastname ? person.lastname : "{ Lastname }"}
         </h2>
 
         <section id="contact-info">

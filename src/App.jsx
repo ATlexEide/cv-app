@@ -8,8 +8,8 @@ import EditDialog from "./Components/EditDialog";
 
 function App() {
   const [person, setPerson] = useState({
-    firstName: "Navn",
-    lastName: "Navnesen",
+    firstname: "Navn",
+    lastname: "Navnesen",
     email: "mail@mail.no",
     phone: "12345678",
   });
@@ -18,11 +18,6 @@ function App() {
   const [practical, setPractical] = useState(practicalData);
   const [isEditing, setIsEditing] = useState(false);
   const [currentCard, setCurrentCard] = useState({});
-
-  const handleDetailChange = (e) => {
-    setPerson({ ...person, [e.target.name]: e.target.value });
-    console.log(person);
-  };
 
   const addExperience = (exp, type) => {
     if (type === "education") setEducation([...education, exp]);
@@ -34,7 +29,7 @@ function App() {
       <section id="inputs">
         {!isEditing && (
           <>
-            <DetailsForm person={person} callback={handleDetailChange} />
+            <DetailsForm person={person} setPerson={setPerson} />
 
             <hr id="creature" />
 
