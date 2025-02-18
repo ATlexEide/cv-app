@@ -1,6 +1,7 @@
 import "../styles/PreviewFile.css";
 import Card from "./Cards/Card";
 import Border from "./Border";
+
 function PreviewFile({
   practical,
   setPractical,
@@ -19,6 +20,7 @@ function PreviewFile({
       ? setEducation(education.filter((card) => card.id !== cardId))
       : setPractical(practical.filter((card) => card.id !== cardId));
   };
+
   return (
     <>
       <article id="file">
