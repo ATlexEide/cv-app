@@ -54,4 +54,5 @@ function PracticalInput({ practicalInfo, setPracticalInfo }) {
     </>
   );
 }
+
 export default PracticalInput;

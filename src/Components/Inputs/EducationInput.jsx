@@ -1,4 +1,5 @@
 import Input from "./Input";
+
 function EducationInput({ schoolInfo, setSchoolInfo }) {
   return (
     <>
@@ -53,4 +54,5 @@ function EducationInput({ schoolInfo, setSchoolInfo }) {
     </>
   );
 }
+
 export default EducationInput;
