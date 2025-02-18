@@ -54,7 +54,6 @@ function PreviewFile({
         <section id="practical">
           <h2 className="sectionTitle">Practical experience</h2>
           {practical.map((company, index) => {
-            console.log(company);
             return (
               <Card
                 key={index}
