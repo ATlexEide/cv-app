@@ -1,6 +1,5 @@
 import "../styles/PreviewFile.css";
-import EducationCard from "./Cards/EducationCard";
-import PracticalCard from "./Cards/PracticalCard";
+import Card from "./Cards/Card";
 import Border from "./Border";
 function PreviewFile({
   practical,
@@ -40,7 +39,7 @@ function PreviewFile({
           <h2 className="sectionTitle">Education</h2>
           {education.map((school, index) => {
             return (
-              <EducationCard
+              <Card
                 key={index}
                 data={school}
                 handleEdit={handleEditCard}
@@ -55,7 +54,7 @@ function PreviewFile({
           {practical.map((company, index) => {
             console.log(company);
             return (
-              <PracticalCard
+              <Card
                 key={index}
                 data={company}
                 handleEdit={handleEditCard}
