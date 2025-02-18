@@ -1,5 +1,4 @@
 function Input({ label, name, type, value, onChange, className, placeholder }) {
-  console.log(type);
   switch (type) {
     case "To":
     case "From":
