@@ -1,12 +1,19 @@
-function Input({
-  label,
-  name,
-  type = "text",
-  value,
-  onChange,
-  className,
-  placeholder,
-}) {
+function Input({ label, name, type, value, onChange, className, placeholder }) {
+  console.log(type);
+  switch (type) {
+    case "To":
+    case "From":
+      type = "date";
+      break;
+    case "Desc":
+      type = "textarea";
+      break;
+
+    default:
+      type = "text";
+      break;
+  }
+
   return (
     <div className="input">
       <label htmlFor={name}>{label}: </label>
