@@ -64,27 +64,7 @@ function EditDialog({
   const handleCancel = () => {
     setIsEditing(false);
   };
-  const getValue = (id) => {
-    switch (id) {
-      case "school":
-        return school;
-      case "company":
-        return company;
-      case "degree":
-        return degree;
-      case "title":
-        return title;
-      case "desc":
-        return desc;
-      case "from":
-        return from;
-      case "to":
-        return to;
 
-      default:
-        break;
-    }
-  };
   const updateInputValue = (input, value) => {
     console.log(input);
     console.log(value);
@@ -132,7 +112,7 @@ function EditDialog({
                 .join("")}
               type={input[0]}
               name={input[0].toLowerCase()}
-              value={getValue(input[0])}
+              value={eval(input[0])}
               onChange={(e) => {
                 updateInputValue(e.target, e.target.value);
                 setNewCard({ ...newCard, [e.target.id]: e.target.value });
