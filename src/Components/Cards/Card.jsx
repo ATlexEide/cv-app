@@ -8,7 +8,7 @@ function Card({ data, handleEdit, handleDelete }) {
   return (
     <article className="card">
       <div id="heading">
-        <span id="date">{`${data.timeFrom} -> ${data.timeTo}`}</span>
+        <span id="date">{`${data.from} -> ${data.to}`}</span>
         <h3 id={type}>{place}</h3>
         <div className="cardbuttons">
           <button
