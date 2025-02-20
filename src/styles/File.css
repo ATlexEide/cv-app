@@ -1,0 +1,170 @@
+:root {
+  --col1-width: 50mm;
+  --image-border: rgba(14, 14, 78, 1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+li {
+  list-style: none;
+}
+body {
+  background-color: rgb(27, 27, 27);
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#file {
+  width: 210mm;
+  height: 297mm;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 70mm 2fr;
+  grid-template-rows: var(--col1-width) 1fr;
+}
+#main-heading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 20mm;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    100deg,
+    #d7d7ff 10%,
+    rgba(98, 98, 164, 1) 50%,
+    rgba(14, 14, 78, 1) 100%
+  );
+}
+h1,
+#title {
+  color: white;
+  paint-order: stroke fill;
+}
+h1 {
+  -webkit-text-stroke: 1mm rgb(15, 15, 15);
+}
+#title {
+  border-radius: 5px;
+  padding: 2mm;
+  -webkit-text-stroke: 0.7mm rgb(15, 15, 15);
+}
+#lastname {
+  -webkit-text-stroke: 1mm rgb(0, 0, 0);
+  paint-order: stroke fill;
+}
+#info {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.heading {
+  display: flex;
+  padding: 2mm 0;
+  gap: 7mm;
+  align-items: end;
+  -webkit-text-stroke: 0.3mm white;
+  paint-order: stroke fill;
+}
+#languages {
+  gap: 10mm;
+}
+header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  font-size: 90%;
+  display: grid;
+  grid-template-columns: 70mm 1fr;
+}
+header img {
+  grid-column: 1 / 2;
+  border-radius: 100%;
+  height: 40mm;
+  border: 1mm solid var(--image-border);
+}
+.heading i {
+  font-size: 10mm;
+}
+hr {
+  margin: 3mm;
+  border: 0.2mm solid rgb(32, 32, 32);
+  border-radius: 100%;
+}
+i {
+  margin-right: 2mm;
+  width: 5mm;
+  font-size: 5mm;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5mm;
+}
+.skill,
+.languages {
+  padding: 1mm 0;
+  font-size: 3.5mm;
+}
+.year {
+  margin-top: 3mm;
+}
+.info {
+  padding: 1mm 3mm;
+}
+
+#pfp,
+#info {
+  background-color: rgb(215, 215, 255);
+}
+#pfp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#col2 {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  padding: 10mm;
+}
+
+.workexp,
+.section-title {
+  padding: 0 5mm;
+}
+.workexp {
+  margin-top: 5mm;
+}
+
+.timespan {
+  font-size: 80%;
+}
+.first {
+  margin: 0;
+}
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #file {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+@page {
+  size: portrait;
+  margin: 0mm;
+}
