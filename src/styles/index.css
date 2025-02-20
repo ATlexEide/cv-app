@@ -19,6 +19,9 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+li {
+  list-style: none;
+}
 a {
   font-weight: 500;
   color: #646cff;
