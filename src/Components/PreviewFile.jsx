@@ -118,12 +118,9 @@ function PreviewFile({
           {/* <!--  --> */}
           <section id="languages">
             <ul className="info-list">
-              {languages.map((language, index) => (
+              {languages.map((languageName, index) => (
                 <li key={index}>
-                  <h3 className="info">
-                    <i className={`fa-brands fa-${language}`}></i>
-                    {language}
-                  </h3>
+                  <Card language={true} languageName={languageName} />
                 </li>
               ))}
             </ul>
