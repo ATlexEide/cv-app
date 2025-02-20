@@ -73,6 +73,7 @@ export default Card;
 
 // </article>
 
+// FIXME: ERROR ON EDITING DATA WITH "current" key:value
 function CardButton(props) {
   return (
     <div className="cardbuttons">
