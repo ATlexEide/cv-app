@@ -7,7 +7,7 @@ form {
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 0.5em;
   padding: 1em;
 }
 hr {
@@ -33,6 +33,7 @@ hr {
 }
 input,
 textarea {
+  border: solid 1px black;
   width: 100%;
   color: black;
   padding: 0 1em;
