@@ -35,7 +35,7 @@ function Input({ label, name, type, value, onChange, className, placeholder }) {
           type={type}
           value={value}
           onChange={onChange}
-          placeholder={placeholder ? label : ""}
+          placeholder={placeholder ? placeholder : ""}
         />
       )}
     </div>
