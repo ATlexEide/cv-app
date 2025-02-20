@@ -2,6 +2,9 @@ import Input from "../Inputs/Input";
 import "../../styles/Form.css";
 
 function DetailsForm({ person, setPerson }) {
+  // Input fields to add
+  // If needed, add custom placeholder text after comma
+  // ex: "Some input,Some custom placeholder"
   const details = [
     "Firstname",
     "Lastname",
@@ -9,6 +12,8 @@ function DetailsForm({ person, setPerson }) {
     "Phone",
     "Github",
     "LinkedIn",
+    "Skills,Comma separated list",
+    "Languages,Comma separated list",
   ];
   return (
     <>
@@ -19,11 +24,11 @@ function DetailsForm({ person, setPerson }) {
           <Input
             key={input}
             className="personalInput"
-            label={input}
+            label={input.includes(",") ? input.split(",")[0] : input}
             type={input}
-            name={input.toLowerCase()}
+            name={input.includes(",") ? input.split(",")[0] : input}
             value={person[input.toLowerCase()]}
-            placeholder={true}
+            placeholder={input.includes(",") ? input.split(",")[1] : input}
             onChange={(e) => {
               setPerson({ ...person, [input.toLowerCase()]: e.target.value });
             }}
