@@ -4,7 +4,6 @@ import "../styles/Form.css";
 
 function EditDialog({
   card,
-  dialogIsOpen,
   education,
   setEducation,
   practical,
@@ -24,10 +23,6 @@ function EditDialog({
   //eslint-enable
 
   useEffect(() => {
-    console.log(card);
-    if (dialogIsOpen)
-      document.getElementById("editDialog").setAttribute("open", true);
-    else document.getElementById("editDialog").removeAttribute("open");
     if (card.school) {
       setSchool(card.school);
       setDegree(card.degree);
@@ -49,7 +44,6 @@ function EditDialog({
     card.desc,
     card.timeFrom,
     card.timeTo,
-    dialogIsOpen,
   ]);
 
   const handleUpdate = () => {
