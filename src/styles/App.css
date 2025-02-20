@@ -15,19 +15,3 @@
   justify-self: end;
   color: black;
 }
-
-@media print {
-  body {
-    visibility: hidden;
-  }
-  #file {
-    visibility: visible;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-}
-@page {
-  size: auto;
-  margin: 0mm;
-}

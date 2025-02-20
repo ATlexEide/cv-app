@@ -72,3 +72,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #file {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+@page {
+  size: auto;
+  margin: 0mm;
+}
