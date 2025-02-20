@@ -15,16 +15,15 @@ function App() {
     phone: "12345678",
     linkedin: "",
     github: "",
+    skills: "",
+    languages: "",
     country: "Country",
     city: "City",
     street: "Fake Street 123",
     designation: "Developer",
     bio: `Hello! I'm Alexander, a developer from Bergen, Norway. I love learning new things and finding ways of improving what i already know.`,
   });
-  const [skills, setSkills] = useState(["React", "Teamwork", "GIT"]);
-  // setSkills(["React", "Teamwork", "GIT"]);
-  const [languages, setLanguages] = useState(["JavaScript", "Python", "Java"]);
-  // setLanguages(["JavaScript", "Python", "Java"]);
+
   const [education, setEducation] = useState(educationData);
   const [practical, setPractical] = useState(practicalData);
   const [isEditing, setIsEditing] = useState(false);
@@ -76,8 +75,8 @@ function App() {
 
       <section id="preview">
         <PreviewFile
-          languages={languages}
-          skills={skills}
+          languages={person.languages.split(",")}
+          skills={person.skills.split(",")}
           practical={practical}
           setPractical={setPractical}
           education={education}
