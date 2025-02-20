@@ -31,16 +31,14 @@ function Card({
       </h3>
     );
 
-  const type = data.school ? "education" : "practical";
-  const place = data.school ? data.school : data.company;
-  const designation = data.school ? data.degree : data.title;
   if (workexp)
     return (
       <section className="workexp card" id={data.id}>
         <h3>
-          <span className="timespan">{`${data.from.replace(/-/g, "/")} - ${
-            data.isCurrent ? "current" : data.to.replace(/-/g, "/")
-          }`}</span>{" "}
+          <span className="timespan">
+            {data.from && data.from.replace(/-/g, "/")} - $
+            {data.to && data.to.replace(/-/g, "/")}
+          </span>{" "}
           | {data.company}
         </h3>
         <h4>{data.title}</h4>
@@ -49,7 +47,7 @@ function Card({
           handleEdit={handleEdit}
           handleDelete={handleDelete}
           data={data}
-          type={type}
+          type={"practical"}
         />
       </section>
     );
@@ -57,10 +55,11 @@ function Card({
   return (
     <section className="school info card">
       <div className="year">
-        {data.from.replace(/-/g, "/")} - {data.to.replace(/-/g, "/")}
+        {data.from && data.from.replace(/-/g, "/")} -{" "}
+        {data.to && data.to.replace(/-/g, "/")}
       </div>
-      <h3>{place}</h3>
-      <h4>{designation}</h4>
+      <h3>{data.school}</h3>
+      <h4>{data.study}</h4>
       {data.desc && (
         <>
           <h5>Extra info:</h5>
@@ -71,7 +70,7 @@ function Card({
         handleEdit={handleEdit}
         handleDelete={handleDelete}
         data={data}
-        type={type}
+        type={"education"}
       />
     </section>
   );
