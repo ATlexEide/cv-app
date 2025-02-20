@@ -15,8 +15,7 @@ function Card({
         </h3>
       </section>
     );
-  if (data) {
-  }
+
   const type = data.school ? "education" : "practical";
   const place = data.school ? data.school : data.company;
   const designation = data.school ? data.degree : data.title;
