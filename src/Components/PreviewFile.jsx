@@ -15,6 +15,7 @@ function PreviewFile({
   setIsEditing,
 }) {
   const handleEditCard = (card) => {
+    console.log(card);
     setCurrentCard(card);
     setIsEditing(true);
   };
@@ -175,7 +176,12 @@ function PreviewFile({
           <ul className="info-list">
             {practical.map((work, index) => (
               <li key={index}>
-                <Card data={work} workexp={true} />
+                <Card
+                  key={index}
+                  data={work}
+                  handleEdit={handleEditCard}
+                  handleDelete={handleDelete}
+                />
               </li>
             ))}
           </ul>
