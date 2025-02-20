@@ -81,10 +81,15 @@ button:focus-visible {
     visibility: hidden;
   }
   #file {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
     visibility: visible;
     position: absolute;
     left: 0;
     top: 0;
+  }
+  #file button {
+    visibility: hidden;
   }
 }
 @page {

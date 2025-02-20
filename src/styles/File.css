@@ -171,20 +171,3 @@ i {
   width: 100;
   text-align: start;
 }
-@media print {
-  body {
-    visibility: hidden;
-  }
-  #file {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    visibility: visible;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-}
-@page {
-  size: auto;
-  margin: 0mm;
-}
