@@ -5,7 +5,6 @@ import DetailsForm from "./Components/Forms/DetailsForm";
 import ExperienceForm from "./Components/Forms/ExperienceForm";
 import PreviewFile from "./Components/PreviewFile";
 import EditDialog from "./Components/EditDialog";
-import "./styles/PreviewFile.css";
 import "./styles/File.css";
 
 function App() {
@@ -19,6 +18,8 @@ function App() {
     country: "Country",
     city: "City",
     street: "Fake Street 123",
+    designation: "Developer",
+    bio: `Hello! I'm Alexander, a developer from Bergen, Norway. I love learning new things and finding ways of improving what i already know.`,
   });
   const [skills, setSkills] = useState(["React", "Teamwork", "GIT"]);
   // setSkills(["React", "Teamwork", "GIT"]);
