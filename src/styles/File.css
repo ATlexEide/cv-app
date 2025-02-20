@@ -4,6 +4,7 @@
 }
 
 #file {
+  color: black;
   width: 210mm;
   height: 297mm;
   background-color: white;
@@ -33,6 +34,7 @@
   paint-order: stroke fill;
 }
 #name {
+  font-size: 10mm;
   -webkit-text-stroke: 1mm rgb(15, 15, 15);
 }
 #designation {
@@ -40,7 +42,7 @@
   padding: 2mm;
   -webkit-text-stroke: 0.7mm rgb(15, 15, 15);
 }
-#lastname {
+#name #lastname {
   -webkit-text-stroke: 1mm rgb(0, 0, 0);
   paint-order: stroke fill;
 }
@@ -75,7 +77,7 @@
 .heading i {
   font-size: 10mm;
 }
-.break {
+.file-hr {
   margin: 3mm;
   border: 0.2mm solid rgb(32, 32, 32);
   border-radius: 100%;
@@ -86,7 +88,7 @@ i {
   font-size: 5mm;
 }
 
-.sub-cat {
+.category {
   display: flex;
   flex-direction: column;
   padding: 0 5mm;
@@ -100,6 +102,7 @@ i {
   margin-top: 3mm;
 }
 .info {
+  justify-content: start;
   padding: 1mm 3mm;
 }
 
@@ -135,7 +138,39 @@ i {
 .first {
   margin: 0;
 }
-
+.card .cardbuttons {
+  opacity: 0;
+  display: none;
+}
+.card:hover .cardbuttons {
+  display: block;
+  opacity: 1;
+}
+.cardbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  grid-column: 3/4;
+  opacity: 1;
+}
+.cardbuttons button {
+  border: solid 1px black;
+  background-color: rgb(43, 43, 43);
+  box-shadow: 3px 3px 0px black;
+  transition: 0.1s;
+}
+.cardbuttons button:hover {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+  background-color: rgb(0, 0, 0);
+}
+.card:hover .cardbuttons {
+  display: block;
+}
+.info-list {
+  width: 100;
+  text-align: start;
+}
 @media print {
   body {
     visibility: hidden;
@@ -150,6 +185,6 @@ i {
   }
 }
 @page {
-  size: portrait;
+  size: auto;
   margin: 0mm;
 }
