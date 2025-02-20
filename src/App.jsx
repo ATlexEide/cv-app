@@ -5,6 +5,8 @@ import DetailsForm from "./Components/Forms/DetailsForm";
 import ExperienceForm from "./Components/Forms/ExperienceForm";
 import PreviewFile from "./Components/PreviewFile";
 import EditDialog from "./Components/EditDialog";
+import "./styles/PreviewFile.css";
+import "./styles/File.css";
 
 function App() {
   const [person, setPerson] = useState({
@@ -12,8 +14,16 @@ function App() {
     lastname: "Navnesen",
     email: "mail@mail.no",
     phone: "12345678",
+    linkedin: "",
+    github: "",
+    country: "Country",
+    city: "City",
+    street: "Fake Street 123",
   });
-
+  const [skills, setSkills] = useState(["React", "Teamwork", "GIT"]);
+  // setSkills(["React", "Teamwork", "GIT"]);
+  const [languages, setLanguages] = useState(["JavaScript", "Python", "Java"]);
+  // setLanguages(["JavaScript", "Python", "Java"]);
   const [education, setEducation] = useState(educationData);
   const [practical, setPractical] = useState(practicalData);
   const [isEditing, setIsEditing] = useState(false);
@@ -65,6 +75,8 @@ function App() {
 
       <section id="preview">
         <PreviewFile
+          languages={languages}
+          skills={skills}
           practical={practical}
           setPractical={setPractical}
           education={education}
