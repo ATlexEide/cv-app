@@ -24,7 +24,6 @@ export const practicalData = [
     from: "2001-01-01",
     to: "2002-02-02",
     desc: "asdaqdasdasd",
-    current: true,
   },
   {
     id: crypto.randomUUID(),
