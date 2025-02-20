@@ -2,7 +2,14 @@ import Input from "../Inputs/Input";
 import "../../styles/Form.css";
 
 function DetailsForm({ person, setPerson }) {
-  const details = ["Firstname", "Lastname", "Email", "Phone"];
+  const details = [
+    "Firstname",
+    "Lastname",
+    "Email",
+    "Phone",
+    "Github",
+    "LinkedIn",
+  ];
   return (
     <>
       <h2>PERSONAL INFO</h2>
