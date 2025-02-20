@@ -2,6 +2,8 @@ function Card({
   workexp = false,
   skill = false,
   skillName,
+  language = false,
+  languageName,
   data,
   handleEdit,
   handleDelete,
@@ -14,6 +16,19 @@ function Card({
           {skillName}
         </h3>
       </section>
+    );
+  if (language)
+    return (
+      <h3 className="info">
+        <i
+          className={`fa-brands fa-${
+            languageName.toLowerCase() === "javascript"
+              ? "js"
+              : languageName.toLowerCase()
+          }`}
+        ></i>
+        {languageName}
+      </h3>
     );
 
   const type = data.school ? "education" : "practical";
