@@ -38,18 +38,15 @@ textarea {
   color: black;
   padding: 0 1em;
   resize: vertical;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 2px 2px 0px black;
+  height: 3em;
 }
 label {
   display: block;
   text-align: start;
   font-weight: 700;
-}
-input,
-textarea {
-  border-radius: 6px;
-  background-color: white;
-  box-shadow: 2px 2px 0px black;
-  height: 3em;
 }
 textarea {
   height: 6em;
