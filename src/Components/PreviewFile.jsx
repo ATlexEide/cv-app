@@ -34,7 +34,11 @@ function PreviewFile({
       <header id="file-header">
         <div id="pfp">
           <img
-            src="https://avatars.githubusercontent.com/u/117330370?v=4"
+            src={
+              person.image
+                ? person.image
+                : "https://avatars.githubusercontent.com/u/117330370?v=4"
+            }
             alt="picture taken from linkedin"
           />
         </div>
