@@ -14,6 +14,7 @@ function PreviewFile({
   setCurrentCard,
   setIsEditing,
 }) {
+  const skillsIsEmpty = skills.length === 1 && skills[0] === "" ? true : false;
   const handleEditCard = (card) => {
     console.log(card);
     setCurrentCard(card);
@@ -92,21 +93,25 @@ function PreviewFile({
           </ul>
         </article>
         {/* <!-- Contact End --> */}
-        <hr className="file-hr" />
         {/* <!-- Skill --> */}
-        <article className="category">
-          <div className="heading">
-            <i className="fa fa-cogs" aria-hidden="true"></i>
-            <h2>Skills</h2>
-          </div>
-          <ul className="info-list">
-            {skills.map((skillName, index) => (
-              <li key={index}>
-                <Card skill={true} skillName={skillName} />
-              </li>
-            ))}
-          </ul>
-        </article>
+        {!skillsIsEmpty && (
+          <>
+            <hr className="file-hr" />
+            <article className="category">
+              <div className="heading">
+                <i className="fa fa-cogs" aria-hidden="true"></i>
+                <h2>Skills</h2>
+              </div>
+              <ul className="info-list">
+                {skills.map((skillName, index) => (
+                  <li key={index}>
+                    <Card skill={true} skillName={skillName} />
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </>
+        )}
         {/* <!-- Skills End --> */}
         <hr className="file-hr" />
         {/* <!-- Languages --> */}
