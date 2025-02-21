@@ -8,6 +8,9 @@ function DetailsForm({ person, setPerson }) {
   const details = [
     "Firstname",
     "Lastname",
+    "Street",
+    "City",
+    "Country",
     "Email",
     "Phone",
     "Github",

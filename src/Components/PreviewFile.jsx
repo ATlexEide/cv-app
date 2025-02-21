@@ -60,7 +60,24 @@ function PreviewFile({
           <ul className="info-list">
             {person.street && (
               <div id="location" className="info">
-                <i className="fa-solid fa-location-dot"></i>| {person.street}
+                <i className="fa-solid fa-location-dot"></i>|{" "}
+                {person.street && person.street}
+              </div>
+            )}
+            {person.city && person.country && (
+              <div id="city-country" className="info">
+                <i className="fa-solid fa-globe"></i>| {person.city},{" "}
+                {person.country}
+              </div>
+            )}
+            {person.city && !person.country && (
+              <div id="city-country" className="info">
+                <i className="fa-solid fa-globe"></i>| {person.city}
+              </div>
+            )}
+            {!person.city && person.country && (
+              <div id="city-country" className="info">
+                <i className="fa-solid fa-globe"></i>| {person.country}
               </div>
             )}
             {/* PHONE NUMBER */}
