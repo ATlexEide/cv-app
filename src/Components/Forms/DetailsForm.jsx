@@ -30,7 +30,13 @@ function DetailsForm({ person, setPerson }) {
             value={person[input.toLowerCase()]}
             placeholder={input.includes(",") ? input.split(",")[1] : input}
             onChange={(e) => {
-              setPerson({ ...person, [input.toLowerCase()]: e.target.value });
+              const key = input.includes(",")
+                ? input.split(",")[0].toLowerCase()
+                : input.toLowerCase();
+              setPerson({
+                ...person,
+                [key]: e.target.value,
+              });
             }}
           />
         ))}
