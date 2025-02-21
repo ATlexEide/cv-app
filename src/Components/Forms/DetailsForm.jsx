@@ -8,6 +8,7 @@ function DetailsForm({ person, setPerson }) {
   const details = [
     "Firstname",
     "Lastname",
+    "Image,Insert url for image",
     "Street",
     "City",
     "Country",
