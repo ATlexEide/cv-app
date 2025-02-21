@@ -28,11 +28,11 @@ function ExperienceForm({ title, addExperience }) {
             label={input}
             type={input}
             name={input.toLowerCase()}
-            placeholder={true}
+            placeholder={input}
             onChange={(e) => {
               setExperienceInfo({
                 ...experienceInfo,
-                timeFrom: e.target.value,
+                [input.toLowerCase()]: e.target.value,
               });
             }}
           />
