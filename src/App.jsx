@@ -11,6 +11,7 @@ function App() {
   const [person, setPerson] = useState({
     firstname: "Navn",
     lastname: "Navnesen",
+    image: "",
     email: "mail@mail.no",
     phone: "12345678",
     linkedin: "",

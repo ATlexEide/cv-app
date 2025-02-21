@@ -14,6 +14,9 @@ function PreviewFile({
   setCurrentCard,
   setIsEditing,
 }) {
+  const skillsIsEmpty = skills.length === 1 && skills[0] === "" ? true : false;
+  const languagesIsEmpty =
+    languages.length === 1 && languages[0] === "" ? true : false;
   const handleEditCard = (card) => {
     console.log(card);
     setCurrentCard(card);
@@ -31,7 +34,11 @@ function PreviewFile({
       <header id="file-header">
         <div id="pfp">
           <img
-            src="https://avatars.githubusercontent.com/u/117330370?v=4"
+            src={
+              person.image
+                ? person.image
+                : "https://avatars.githubusercontent.com/u/117330370?v=4"
+            }
             alt="picture taken from linkedin"
           />
         </div>
@@ -57,7 +64,24 @@ function PreviewFile({
           <ul className="info-list">
             {person.street && (
               <div id="location" className="info">
-                <i className="fa-solid fa-location-dot"></i>| {person.street}
+                <i className="fa-solid fa-location-dot"></i>|{" "}
+                {person.street && person.street}
+              </div>
+            )}
+            {person.city && person.country && (
+              <div id="city-country" className="info">
+                <i className="fa-solid fa-globe"></i>| {person.city},{" "}
+                {person.country}
+              </div>
+            )}
+            {person.city && !person.country && (
+              <div id="city-country" className="info">
+                <i className="fa-solid fa-globe"></i>| {person.city}
+              </div>
+            )}
+            {!person.city && person.country && (
+              <div id="city-country" className="info">
+                <i className="fa-solid fa-globe"></i>| {person.country}
               </div>
             )}
             {/* PHONE NUMBER */}
@@ -92,40 +116,49 @@ function PreviewFile({
           </ul>
         </article>
         {/* <!-- Contact End --> */}
-        <hr className="file-hr" />
         {/* <!-- Skill --> */}
-        <article className="category">
-          <div className="heading">
-            <i className="fa fa-cogs" aria-hidden="true"></i>
-            <h2>Skills</h2>
-          </div>
-          <ul className="info-list">
-            {skills.map((skillName, index) => (
-              <li key={index}>
-                <Card skill={true} skillName={skillName} />
-              </li>
-            ))}
-          </ul>
-        </article>
+        {!skillsIsEmpty && (
+          <>
+            <hr className="file-hr" />
+            <article className="category">
+              <div className="heading">
+                <i className="fa fa-cogs" aria-hidden="true"></i>
+                <h2>Skills</h2>
+              </div>
+              <ul className="info-list">
+                {skills.map((skillName, index) => (
+                  <li key={index}>
+                    <Card skill={true} skillName={skillName} />
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </>
+        )}
         {/* <!-- Skills End --> */}
-        <hr className="file-hr" />
         {/* <!-- Languages --> */}
-        <article className="category">
-          <div className="heading">
-            <i className="fa-solid fa-code"></i>
-            <h2>Languages</h2>
-          </div>
-          {/* <!--  --> */}
-          <section id="languages">
-            <ul className="info-list">
-              {languages.map((languageName, index) => (
-                <li key={index}>
-                  <Card language={true} languageName={languageName} />
-                </li>
-              ))}
-            </ul>
-          </section>
-        </article>
+
+        {!languagesIsEmpty && (
+          <>
+            <hr className="file-hr" />
+            <article className="category">
+              <div className="heading">
+                <i className="fa-solid fa-code"></i>
+                <h2>Languages</h2>
+              </div>
+              {/* <!--  --> */}
+              <section id="languages">
+                <ul className="info-list">
+                  {languages.map((languageName, index) => (
+                    <li key={index}>
+                      <Card language={true} languageName={languageName} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </article>
+          </>
+        )}
         {/* <!-- Languages End --> */}
         <hr className="file-hr" />
         {/* <!-- Education --> */}
