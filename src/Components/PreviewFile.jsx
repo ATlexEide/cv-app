@@ -15,6 +15,8 @@ function PreviewFile({
   setIsEditing,
 }) {
   const skillsIsEmpty = skills.length === 1 && skills[0] === "" ? true : false;
+  const languagesIsEmpty =
+    languages.length === 1 && languages[0] === "" ? true : false;
   const handleEditCard = (card) => {
     console.log(card);
     setCurrentCard(card);
@@ -113,24 +115,29 @@ function PreviewFile({
           </>
         )}
         {/* <!-- Skills End --> */}
-        <hr className="file-hr" />
         {/* <!-- Languages --> */}
-        <article className="category">
-          <div className="heading">
-            <i className="fa-solid fa-code"></i>
-            <h2>Languages</h2>
-          </div>
-          {/* <!--  --> */}
-          <section id="languages">
-            <ul className="info-list">
-              {languages.map((languageName, index) => (
-                <li key={index}>
-                  <Card language={true} languageName={languageName} />
-                </li>
-              ))}
-            </ul>
-          </section>
-        </article>
+
+        {!languagesIsEmpty && (
+          <>
+            <hr className="file-hr" />
+            <article className="category">
+              <div className="heading">
+                <i className="fa-solid fa-code"></i>
+                <h2>Languages</h2>
+              </div>
+              {/* <!--  --> */}
+              <section id="languages">
+                <ul className="info-list">
+                  {languages.map((languageName, index) => (
+                    <li key={index}>
+                      <Card language={true} languageName={languageName} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </article>
+          </>
+        )}
         {/* <!-- Languages End --> */}
         <hr className="file-hr" />
         {/* <!-- Education --> */}
