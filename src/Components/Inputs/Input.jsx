@@ -1,10 +1,11 @@
 function Input({ label, name, type, value, onChange, className, placeholder }) {
-  switch (name) {
+  switch (name.toLowerCase()) {
     case "to":
     case "from":
       type = "date";
       break;
     case "desc":
+    case "bio":
       type = "textarea";
       break;
 

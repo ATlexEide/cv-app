@@ -14,6 +14,7 @@ function DetailsForm({ person, setPerson }) {
     "LinkedIn",
     "Skills,Comma separated list",
     "Languages,Comma separated list",
+    "Bio",
   ];
   return (
     <>
